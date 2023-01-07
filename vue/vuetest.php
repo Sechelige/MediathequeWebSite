@@ -4,3 +4,4 @@ require_once("../config/connexion.php");
 Connexion::connect();
 
 Utilisateur::afficherUtilisateur();
+Utilisateur::getUtilisateurByNum(2);

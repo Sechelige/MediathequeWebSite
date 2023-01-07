@@ -43,7 +43,35 @@ class Utilisateur {
         $req = Connexion::pdo()->query($sql);
         $req->setFetchMode(PDO::FETCH_CLASS, 'Utilisateur');
         $tab = $req->fetchAll();
+        echo "<pre>";
+        print_r($tab);
+        echo "<pre>";
+    }
+
+    //utilisateur by numUtilisateur
+    public static function getUtilisateurByNum($numUtilisateur) {
+        $sql = "SELECT * FROM Utilisateur WHERE numUtilisateur = :numUtilisateur";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->setFetchMode(PDO::FETCH_CLASS, 'Utilisateur');
+        $req->execute(array(':numUtilisateur' => $numUtilisateur));
+        $tab = $req->fetchAll();
         return $tab;
+    }
+
+    //Informations personnelles de l'utilisateur
+    public static function afficheInfoPerso ($numUtilisateur) {
+        $tab = Utilisateur::getUtilisateurByNum($numUtilisateur);
+        foreach ($tab as $u) {
+            include ("../../vue/utilisateur/monProfilInfoperso.html");
+        }
+    }
+
+    //Enmprunt de l'utilisateur
+    public static function afficheEmprunt ($numUtilisateur) {
+        $tab = Utilisateur::getUtilisateurByNum($numUtilisateur);
+        foreach ($tab as $u) {
+            include ("../../vue/utilisateur/monProfilEmprunt.html");
+        }
     }
 }
 

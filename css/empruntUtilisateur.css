@@ -1,0 +1,35 @@
+.mes-emprunt {
+    vertical-align: top;
+    display: inline-block;
+    width: 75%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.mes-emprunt img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 10px;
+    float: left;
+}
+.mes-emprunt .date {
+    display: inline-block;
+}
+.mes-emprunt .titre-livre {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.mes-emprunt .date-emprunt {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.mes-emprunt .date-retour-prevu {
+    font-size: 15px;
+    margin-bottom: 0;
+}

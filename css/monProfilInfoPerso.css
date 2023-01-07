@@ -1,0 +1,70 @@
+    .mes-infos {
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 0;
+        width: 79%;
+        height: 100vh;
+        background-color: white;
+    }
+
+    .infoperso {
+        display: inline-block;
+        margin-left: 3rem;
+    }
+
+    .info-scolaire {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5rem;
+    }
+
+    .titre-mes-infos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .titre-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .info-scol {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .mini-titre {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        color: red;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        font-size: 1.2rem;
+        margin-top: 0.1rem;
+    }    

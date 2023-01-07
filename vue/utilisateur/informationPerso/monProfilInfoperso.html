@@ -1,0 +1,32 @@
+<?php
+echo"
+<div class='mes-infos'>
+        <div class='titre-mes-infos'>-------------------------  Mes informations -------------------------</div>
+        <div class='infoperso'>
+            <div class='titre-info'>INFORMATION PERSONNELLES</div>
+            <div class='mini-titre'>Nom</div>
+            <div class='info'>$u->nomUtilisateur</div>
+            <div class='mini-titre'>Prenom</div>
+            <div class='info'>$u->prenomUtilisateur</div>
+            <div class='mini-titre'>E-mail</div>
+            <div class='info'>$u->emailUtilisateur</div>
+            <div class='mini-titre'>N° Telephone</div>
+            <div class='info'>$u->telUtilisateur</div>
+            <div class='mini-titre'>Date de naissance</div>
+            <div class='info'>$u->dateNaissanceUtilisateur</div>
+            <div class='centre-mdp'>
+            <div class='mini-titre'>Mot de passe<div class='btn-modif-mdp'><a href=''>Modifier</a></div></div>
+            <div class='info'>$u->mdpUtilisateur</div>
+        </div>
+        </div>
+
+        <div class='info-scolaire'>
+            <div class='info-scol'>INFORMATION SCOLAIRE</div>
+            <div class='mini-titre'>Etablissement scolaire</div>
+            <div class='info'>$u->lieuUtilisateur</div>
+            <div class='mini-titre'>Formation</div>
+            <div class='info'>$u->etudeUtilisateur</div>
+        </div>
+    </div>
+    ";
+?>

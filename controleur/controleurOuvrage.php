@@ -20,7 +20,6 @@ class controleurOuvrage {
         } else {
             echo "Aucun ouvrage trouvé";
         }
+        include ("vue/footer.html");
     }
-
-    
 }

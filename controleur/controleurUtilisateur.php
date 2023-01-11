@@ -71,8 +71,4 @@ class ControleurUtilisateur {
             header("Location: index.php?controleur=controleurUtilisateur&action=afficherUtilisateurInfoPerso&numUtilisateur=1&alerte=1");
         }   
     }
-
-    //teest
-    
-
 }

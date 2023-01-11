@@ -2,15 +2,16 @@
 require_once ("./config/connexion.php");
 Connexion::connect();
 
-$controleur = "controleurUtilisateur";
-$action = "afficherUtilisateurInfoPerso";
+$controleur = "controleurAcceuil";
+$action = "afficheAcceuil";
 
-$tableauControleur = ["controleurUtilisateur","controleurEmprunt","controleurReservation","controleurOuvrage"];
+$tableauControleur = ["controleurUtilisateur","controleurEmprunt","controleurReservation","controleurOuvrage","controleurAcceuil"];
 $actionParDefaut = array(
     "controleurUtilisateur" => "afficherUtilisateurInfoPerso",
     "controleurEmprunt" => "afficherEmprunt",
     "controleurReservation" => "afficherReservation",
-    "controleurOuvrage" => "afficheOuvrage"
+    "controleurOuvrage" => "afficheOuvrage",
+    "controleurAcceuil" => "afficheAcceuil"
 );
   if (isset($_GET["controleur"]) && in_array($_GET["controleur"],$tableauControleur)) {
     $controleur = $_GET["controleur"];

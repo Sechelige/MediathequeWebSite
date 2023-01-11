@@ -5,11 +5,12 @@ Connexion::connect();
 $controleur = "controleurUtilisateur";
 $action = "afficherUtilisateurInfoPerso";
 
-$tableauControleur = ["controleurUtilisateur","controleurEmprunt","controleurReservation"];
+$tableauControleur = ["controleurUtilisateur","controleurEmprunt","controleurReservation,controleurOuvrage"];
 $actionParDefaut = array(
     "controleurUtilisateur" => "afficherUtilisateurInfoPerso",
     "controleurEmprunt" => "afficherEmprunt",
-    "controleurReservation" => "afficherReservation"
+    "controleurReservation" => "afficherReservation",
+    "controleurOuvrage" => "afficherOuvrage"
 );
   if (isset($_GET["controleur"]) && in_array($_GET["controleur"],$tableauControleur)) {
     $controleur = $_GET["controleur"];

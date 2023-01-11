@@ -61,4 +61,5 @@ class Ouvrage {
             echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
         }
     }
+
 }

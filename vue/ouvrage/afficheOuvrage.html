@@ -1,15 +1,15 @@
 <?php
 echo "
 <div class='affiche-ouvrage'>
-    <img class='img-ouvrage' src='../../src/img/ouvrage/".$ouvrage->numOuvrage.".png' alt=''>
+    <img class='img-ouvrage' src='../../src/img/ouvrage/".$ouvrage->getNumOuvrage().".png' alt=''>
     <div class='container-info-ouvrage'>
-        <div class='titre-ouvrage'>".$ouvrage->getNomOuvrage."</div>
+        <div class='titre-ouvrage'>".$ouvrage->getNomOuvrage()."</div>
         <div class='resume-ouvrage'>Résumé :</br>
             ".$ouvrage->getDescription()."
         </div>
         <div class='info-tech'>
-            <div class='auteur-ouvrage'>".$ouvrage->getNomAuteur()." ".$ouvrage->getPrenomAuteur()."</div>
-            <div class='date-ouvrage'>Date de parution : ".$ouvrage->getDateParutionOuvrage()."</div>
+            <div class='auteur-ouvrage'>nom prenom</div>
+            <div class='date-ouvrage'>Date de parution : 23/09/23</div>
             <div class='np-page'>nombre de page : 235</div>
             <div class='genre'>Genre : Fantastique</div>
         </div>
@@ -21,7 +21,7 @@ echo "
 <div class='confirm-reserv' id='confirm' style='display:none;'>
     <div class='body-reserv'>
         <div class='head-confirm'>Reserver</div>
-        <div class='img'><img src='../../src/img/ouvrage/".$ouvrage->numOuvrage.".png' alt=''></div>
+        <div class='img'><img src='../../src/img/ouvrage/".$ouvrage->getNumOuvrage().".png' alt=''></div>
         <div class='titre'>Titre de l'ouvrage</div>
         <div class='btn'>
             <button class='btn-annuler' onclick='confirm()'>Annuler</button>

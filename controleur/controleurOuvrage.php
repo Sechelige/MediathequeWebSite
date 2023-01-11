@@ -10,12 +10,12 @@ class controleurOuvrage {
         return $ouvrage;
     }
     public static function afficheOuvrage() {
-        $ouvrage = self::getOuvrageGet();
+        $tab_ouvrage = self::getOuvrageGet();
         $titre = "Ouvrage";
         include ("vue/navBar.html");
         if ($tab_ouvrage != false) {
             foreach ($tab_ouvrage as $ouvrage) {
-                include "../../vue/ouvrage/afficheOuvrage.html";
+                include "vue/ouvrage/afficheOuvrage.html";
             }
         } else {
             echo "Aucun ouvrage trouvé";

@@ -1,0 +1,19 @@
+<?php
+echo "
+<div class='nav-info-gauche' >
+    <div class='affiche-profil'>
+        <img src='../../src/img/profil.png'>
+        <div class='nom-prenom'>
+            <div class='nom-utilisateur'>".$u->getNomUtilisateur()."</div>
+            <div class='prenom-utilisateur'>".$u->getPrenomUtilisateur()."</div>
+        </div>
+
+    </div>
+    <div class='lien'>
+        <div class='lien-reservation'><a href='index.php?controleur=controleur&numUtilisateur=1'>Mes Informations</a></div>
+        <div class='lien-emprunt'><a href='index.php?controleur=controleurEmprunt&numUtilisateur=1'>Mes Emprunts</a></div>
+        <div class='lien-reservation'><a href='index.php?controleur=controleurReservation&numUtilisateur=1'>Mes Reservations</a></div>
+    </div>
+</div>
+";
+?>

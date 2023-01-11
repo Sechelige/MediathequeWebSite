@@ -1,0 +1,99 @@
+<?php
+echo "
+<div class='reservation'>
+    <div class='aff'>
+    <div class='titre-exemplaire'>".$reservation->nomOuvrage."</div>
+    <div class='auteur'>Auteur : ".$reservation->prenomAuteur." ".$reservation->nomAuteur."</div>
+    <div class='isbn-ex'>ISBN : ".$reservation->isbnExemplaire."</div>
+    <div class='langue-ex'>Langue : ".$reservation->langueExemplaire."</div>
+    <div class='date-reservation'>Date de réservation : ".$reservation->getDateReservation()."</div>
+    <div class='btn-annuler' onclick='confirmA(".$reservation->getNumReservation().")'>Annuler</div>
+    </div>
+</div>
+
+<div class='confirm-annula' id='".$reservation->getNumReservation()."' style='display:none;'>
+    <div class='body-annula'>
+        <div class='head-confirm'>confirmer l'annulation ?</div>
+        <div class='btn'>
+            <button class='btn-confirmer'><a href='index.php?controleur=controleurReservation&action=annulerReservation&numReservation=".$reservation->getNumReservation()."'>oui</a></button>
+            <button class='btn-annuler' onclick='confirmA(".$reservation->getNumReservation().")'>non</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .confirm-annula {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+
+    .body-annula {
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 260px;
+        height: auto;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .head-confirm {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        background-color: #007bff;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .btn {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+        text-decoration: none;
+    }
+
+    .btn button {
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+    .btn-annuler {
+        background-color: red;
+        color: white;
+    }
+
+    .btn-confirmer {
+        background-color: green;
+        color: white;
+    }
+</style>
+
+<script>
+    function confirmA(a) {
+        var confirmA = document.getElementById(a);
+        if (confirmA.style.display == 'none') {
+            confirmA.style.display = 'block';
+        } else {
+            confirmA.style.display = 'none';
+        }
+    }
+</script>
+";
+?>

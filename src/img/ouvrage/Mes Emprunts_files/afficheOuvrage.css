@@ -1,0 +1,93 @@
+.affiche-ouvrage {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 95%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-info-ouvrage {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+
+.info-tech {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.img-ouvrage {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.titre-ouvrage {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-ouvrage {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.auteur-ouvrage {
+    margin-left: 1rem;
+}
+
+.date-ouvrage {
+    margin-left: 1rem;
+}
+
+.np-page {
+    margin-left: 1rem;
+}
+
+.genre {
+    margin-left: 1rem;
+}
+
+.btn-ouvrage {
+    display: flex;
+    justify-content: end;
+    margin-left: 1rem;
+}
+
+.reserver {
+    margin-top: 1.5rem;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.reserver:hover {
+    cursor: pointer;
+}

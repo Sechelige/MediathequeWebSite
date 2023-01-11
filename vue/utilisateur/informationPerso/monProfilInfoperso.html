@@ -1,32 +1,156 @@
 <?php
 echo"
 <div class='mes-infos'>
-        <div class='titre-mes-infos'>-------------------------  Mes informations -------------------------</div>
         <div class='infoperso'>
             <div class='titre-info'>INFORMATION PERSONNELLES</div>
             <div class='mini-titre'>Nom</div>
-            <div class='info'>$u->nomUtilisateur</div>
+            <div class='info'>".$u->getNomUtilisateur()."</div>
             <div class='mini-titre'>Prenom</div>
-            <div class='info'>$u->prenomUtilisateur</div>
+            <div class='info'>".$u->getPrenomUtilisateur()."</div>
             <div class='mini-titre'>E-mail</div>
-            <div class='info'>$u->emailUtilisateur</div>
+            <div class='info'>".$u->getEmailUtilisateur()."</div>
             <div class='mini-titre'>N° Telephone</div>
-            <div class='info'>$u->telUtilisateur</div>
+            <div class='info'>".$u->getTelUtilisateur()."</div>
             <div class='mini-titre'>Date de naissance</div>
-            <div class='info'>$u->dateNaissanceUtilisateur</div>
+            <div class='info'>".$u->getDateNaissanceUtilisateur()."</div>
             <div class='centre-mdp'>
-            <div class='mini-titre'>Mot de passe<div class='btn-modif-mdp'><a href=''>Modifier</a></div></div>
-            <div class='info'>$u->mdpUtilisateur</div>
+            <div class='mini-titre'>Mot de passe
+            <button class='btn-modifier' onclick='modifmdp()'>Modifier</button>
+            </div>
+            <div class='info'>".$u->getMdpUtilisateur()."</div>
         </div>
         </div>
 
         <div class='info-scolaire'>
             <div class='info-scol'>INFORMATION SCOLAIRE</div>
             <div class='mini-titre'>Etablissement scolaire</div>
-            <div class='info'>$u->lieuUtilisateur</div>
+            <div class='info'>".$u->getLieuUtilisateur()."</div>
             <div class='mini-titre'>Formation</div>
-            <div class='info'>$u->etudeUtilisateur</div>
+            <div class='info'>".$u->getEtudeUtilisateur()."</div>
         </div>
     </div>
+
+    <div class='modifmdp' id='modifmdp' style='display: none;'>
+        <div class='body-modifmdp'>
+            <div class='head-modifmdp'>Modifier votre mot de passe</div>
+            <div class='form-modifmdp'>
+                <form action='index.php?controleur=controleurUtilisateur&action=changerMdpUtilisateur&numUtilisateur=1' method='post'>
+                    <div class='input-modifmdp'>
+                        <label for='ancienmdp'>Ancien mot de passe</label>
+                        <input type='password' name='ancienmdp' id='ancienmdp' required>
+                    </div>
+                    <div class='input-modifmdp'>
+                        <label for='nouveaumdp'>Nouveau mot de passe</label>
+                        <input type='password' name='nouveaumdp' id='nouveaumdp' required>
+                    </div>
+                    <div class='btn'>
+                        <button class='btn-annuler' onclick='modifmdp()'>Annuler</button>
+                        <button class='btn-confirmer'>Confirmer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<style>
+.btn-modifier{
+    margin-left: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 1rem;
+}
+.btn-modifier:hover{
+    cursor: pointer;
+}
+
+.modifmdp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.body-modifmdp {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.head-modifmdp {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+     background-color: #007bff;
+    border-radius: 10px 10px 0 0;    
+}
+
+.form-modifmdp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-confirmer {
+    margin-left: 4rem;
+     width: 100px;
+    height: 40px;
+    background-color: #1d8b07;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-annuler {
+    width: 100px;
+    height: 40px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-confirmer:hover {
+    background-color: #155724;
+}
+
+.btn-annuler:hover {
+    background-color: #c82333;
+}
+</style>
+
+<script>
+    function modifmdp() {
+        var div = document.getElementById('modifmdp');
+        if (div.style.display === 'none') {
+            div.style.display = 'block';
+        } else {
+            div.style.display = 'none';
+        }
+    }
+</script>
     ";
 ?>

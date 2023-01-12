@@ -1,15 +1,9 @@
-<?php
-echo "
-    <div class='container-alerte'>
-        <div class='alerte'>
-            <div class='titre-alerte'>
-                <div class='titre'>ALERTE !</div>
-                <div class='fermer-alerte'><a href='index.php?controleur=controleurUtilisateur&numUtilisateur=1'>X</a></div>
-            </div>
-            <div class='contenu-alerte'>
-                <div class='texte'>$alerte</div>
+<div class='container-alerte'>
+    <div class='alerte'>
+        <div class='titre-alerte'>                
+            <img src="img/error.svg" alt=""></img>
+        </div>
+        <div class='contenu-alerte'><div class='texte'><?php echo $alerte ?></div></div>
+        <div class='fermer-alerte'> <a href='index.php?controleur=controleurUtilisateur&numUtilisateur=1'>✖</a> </div>
     </div>
 </div>
-</div>
-";
-?>

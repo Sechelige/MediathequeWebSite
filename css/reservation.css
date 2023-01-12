@@ -51,15 +51,3 @@
   align-items: center;
 }
 
-.btn-annuler {
-  width: 6rem;
-  height: 100%;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-}
-

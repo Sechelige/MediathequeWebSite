@@ -73,7 +73,7 @@ body {
     width: 5%;
     background-color: rgb(180, 180, 180);
     position: absolute;
-    z-index: 99999;
+    z-index: 2;
     height: 100%;
     left: 0%;
 }

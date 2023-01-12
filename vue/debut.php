@@ -16,8 +16,10 @@
     <link rel='stylesheet' href='css/header.css'>
     <link rel='stylesheet' href='css/footer.css'>
     <link rel='stylesheet' href='css/alerte.css'>
+    <link rel='stylesheet' href='css/modifmdp.css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inder">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <title><?php echo $titre ?></title>
 </head>
 <body>

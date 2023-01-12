@@ -1,5 +1,5 @@
 <?php
-
+require_once ("model/model.php");
 require_once ("model/utilisateur.php");
 
 class ControleurUtilisateur {
@@ -52,17 +52,11 @@ class ControleurUtilisateur {
         include ("vue/footer.html");
     }
 
-
-    
     //changer mot de passe utilisateur
     public static function changerMdpUtilisateur() {
         $numUtilisateur = self::getNumUtilisateur();
         $utilisateur = self::getUtilisateur();
-        echo "<pre>";
-        print_r($utilisateur);
-        echo "</pre>";
-        $ancMdp = $utilisateur[0]->getMdpUtilisateur();
-        var_dump($ancMdp);
+        $ancMdp = $utilisateur[0]->get("mdpUtilisateur");
         $nvMdp = $_POST['nouveaumdp'];
         $ancMdpByPost = $_POST['ancienmdp'];
         if ($ancMdpByPost == $ancMdp) {

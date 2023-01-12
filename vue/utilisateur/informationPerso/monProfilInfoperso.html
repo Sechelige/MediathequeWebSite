@@ -4,29 +4,29 @@ echo"
         <div class='infoperso'>
             <div class='titre-info'>INFORMATION PERSONNELLES</div>
             <div class='mini-titre'>Nom</div>
-            <div class='info'>".$u->getNomUtilisateur()."</div>
+            <div class='info'>".$u->get("nomUtilisateur")."</div>
             <div class='mini-titre'>Prenom</div>
-            <div class='info'>".$u->getPrenomUtilisateur()."</div>
+            <div class='info'>".$u->get("prenomUtilisateur")."</div>
             <div class='mini-titre'>E-mail</div>
-            <div class='info'>".$u->getEmailUtilisateur()."</div>
+            <div class='info'>".$u->get("emailUtilisateur")."</div>
             <div class='mini-titre'>N° Telephone</div>
-            <div class='info'>".$u->getTelUtilisateur()."</div>
+            <div class='info'>".$u->get("telUtilisateur")."</div>
             <div class='mini-titre'>Date de naissance</div>
-            <div class='info'>".$u->getDateNaissanceUtilisateur()."</div>
+            <div class='info'>".$u->get("dateNaissanceUtilisateur")."</div>
             <div class='centre-mdp'>
             <div class='mini-titre'>Mot de passe
             <button class='btn-modifier' onclick='modifmdp()'>Modifier</button>
             </div>
-            <div class='info'>".$u->getMdpUtilisateur()."</div>
+            <div class='info'>".$u->get("mdpUtilisateur")."</div>
         </div>
         </div>
 
         <div class='info-scolaire'>
             <div class='info-scol'>INFORMATION SCOLAIRE</div>
             <div class='mini-titre'>Etablissement scolaire</div>
-            <div class='info'>".$u->getLieuUtilisateur()."</div>
+            <div class='info'>".$u->get("lieuUtilisateur")."</div>
             <div class='mini-titre'>Formation</div>
-            <div class='info'>".$u->getEtudeUtilisateur()."</div>
+            <div class='info'>".$u->get("etudeUtilisateur")."</div>
         </div>
     </div>
 

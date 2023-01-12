@@ -2,8 +2,8 @@
     <div class='affiche-profil <?php if ($t == 1) echo "first" ?>'>
         <img src='img/profil.png'>
         <div class='nom-prenom'>
-            <div class='nom-utilisateur'>".$u->get("nomUtilisateur")."</div>
-            <div class='prenom-utilisateur'>".$u->get("prenomUtilisateur")."</div>
+            <div class='nom-utilisateur'><?php echo $u->get("nomUtilisateur") ?></div>
+            <div class='prenom-utilisateur'><?php echo $u->get("prenomUtilisateur") ?></div>
         </div>
 
     </div>

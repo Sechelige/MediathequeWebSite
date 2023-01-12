@@ -25,7 +25,7 @@ class ControleurUtilisateur {
     }
 
     //affichage de la navBarGauche en fonction du numUtilisateur
-    public static function afficherNavBarGauche() {
+    public static function afficherNavBarGauche($t) {
         $numUtilisateur = self::getNumUtilisateur();
         $utilisateur = self::getUtilisateur();
         foreach ($utilisateur as $u) {
@@ -38,8 +38,9 @@ class ControleurUtilisateur {
         $numUtilisateur = self::getNumUtilisateur();
         $utilisateur = self::getUtilisateur();
         $titre = "Mes Informations Personnelles";
-        include ("vue/navBar.html");
-        self::afficherNavBarGauche();
+        include("vue/debut.php");
+        include ("vue/header-one/header.php");
+        self::afficherNavBarGauche(1);
         echo "<div class='inline'>";
         if (isset($_GET['alerte'])) {
             $alerte="ERREUR : L'ancien mot de passe ne correspond pas à celui indiqué";

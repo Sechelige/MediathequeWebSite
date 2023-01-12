@@ -11,8 +11,9 @@ class controleurOuvrage {
     }
     public static function afficheOuvrage() {
         $tab_ouvrage = self::getOuvrageGet();
-        $titre = "Ouvrage";
-        include ("vue/navBar.html");
+        $titre = "Ouvrage";     
+        include("vue/debut.php");
+        include ("vue/header-one/header.php");
         if ($tab_ouvrage != false) {
             foreach ($tab_ouvrage as $ouvrage) {
                 include "vue/ouvrage/afficheOuvrage.html";
@@ -20,6 +21,6 @@ class controleurOuvrage {
         } else {
             echo "Aucun ouvrage trouvé";
         }
-        include ("vue/footer.html");
+        echo "</body> </html>";
     }
 }

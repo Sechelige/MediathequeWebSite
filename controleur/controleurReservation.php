@@ -5,17 +5,18 @@ require_once "controleur/controleurUtilisateur.php";
 class ControleurReservation {
 
     public static function afficherReservation() {
-        $titre = "Réservation";
+        $titre = "Réservation";      
+        include("vue/debut.php");
         $utilisateur = ControleurUtilisateur::getNumUtilisateur();
-        include "vue/navBar.html";
+        include ("vue/header-one/header.php");
         $tab_reservation = Reservation::getReservationByNumUtilisateur(1);
-        ControleurUtilisateur::afficherNavBarGauche();
+        ControleurUtilisateur::afficherNavBarGauche(3);
         echo "<div class='inline'>";
         foreach ($tab_reservation as $reservation) {
             include "vue/utilisateur/reservations/reservation.html";
         }
         echo "</div>";
-        include "vue/footer.html";
+        echo "</body> </html>";
     }
 
     /*public static function reserver($numExemplaire) {

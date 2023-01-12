@@ -23,7 +23,7 @@ $actionParDefaut = array(
   } else {
 		$action = $actionParDefaut[$controleur];
 	}
-
+  
 	$controleur::$action();
 ?>
 

@@ -20,13 +20,6 @@ class ControleurReservation {
         echo "</body> </html>";
     }
 
-    /*public static function reserver($numExemplaire) {
-        $utilisateur = ControleurUtilisateur::getNumUtilisateur();
-        $reservation = new Reservation($utilisateur, $numExemplaire);
-        $reservation->insertReservation();
-        header("Location: index.php?reservation");
-    }*/
-
     public static function annulerReservation() {
         $numReservation = $_GET["numReservation"];
         Reservation::supprimerReservation($numReservation);

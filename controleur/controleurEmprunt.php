@@ -11,8 +11,9 @@ class controleurEmprunt {
         $tab_emprunt_rendu = Emprunt::getEmpruntRenduHistorique($numUtilisateur);
         $tab_emprunt_non_rendu = Emprunt::getEmpruntEnCours($numUtilisateur);
         $titre = "Mes Emprunts";
-        include ("vue/navBar.html");
-        ControleurUtilisateur::afficherNavBarGauche();
+        include("vue/debut.php");
+        include ("vue/header-one/header.php");
+        ControleurUtilisateur::afficherNavBarGauche(2);
         echo "<div class='inline'>";
         if ($tab_emprunt == false) {
             echo "<h2>Vous n'avez pas d'emprunt en cours</h2>";
@@ -37,6 +38,6 @@ class controleurEmprunt {
             }
             echo "</div>";
     }
-        include ("vue/footer.html");
+        echo "</body> </html>";
     }
 }

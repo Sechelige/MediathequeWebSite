@@ -152,7 +152,7 @@ class Utilisateur {
     }
 
     //navBar de l'utilisateur
-    public static function afficheNavBarGauche ($numUtilisateur) {
+    public static function afficheNavBarGauche($numUtilisateur) {
         $tab = Utilisateur::getUtilisateurByNum($numUtilisateur);
         foreach ($tab as $u) {
             include ("../../vue/utilisateur/navBarGauche.html");

@@ -50,7 +50,7 @@ class ControleurUtilisateur {
             include ("vue/utilisateur/informationPerso/monProfilInfoperso.html");
         }
         echo "</div>";
-        include ("vue/footer.html");
+        echo "</body> </html>";
     }
 
     //changer mot de passe utilisateur

@@ -13,8 +13,13 @@ class ControleurReservation {
         $tab_reservation = Reservation::getReservationByNumUtilisateur($utilisateur);
         ControleurUtilisateur::afficherNavBarGauche(3);
         echo "<div class='inline'>";
-        foreach ($tab_reservation as $reservation) {
-            include "vue/utilisateur/reservations/reservation.html";
+        if ($tab_reservation == false) {
+            echo "<h2>Vous n'avez pas de réservation</h2>";
+        } else {
+            echo "<h2>Mes réservations</h2>";
+            foreach ($tab_reservation as $reservation) {
+                include "vue/utilisateur/reservations/reservation.html";
+            }
         }
         echo "</div>";
         echo "</body> </html>";

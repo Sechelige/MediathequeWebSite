@@ -30,4 +30,9 @@ class ControleurReservation {
         Reservation::supprimerReservation($numReservation);
         header("Location: index.php?controleur=controleurReservation&numUtilisateur=1");
     }
+
+    public static function reserverExemplaire(){
+        echo "reserverOuvrage";
+  
+    }
 }

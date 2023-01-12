@@ -22,10 +22,10 @@ echo "
     <div class='body-reserv'>
         <div class='head-confirm'>Reserver</div>
         <div class='img'><img src='../../src/img/ouvrage/".$ouvrage->getNumOuvrage().".png' alt=''></div>
-        <div class='titre'>Titre de l'ouvrage</div>
+        <div class='titre'>".$ouvrage->getNomOuvrage()."</div>
         <div class='btn'>
             <button class='btn-annuler' onclick='confirm()'>Annuler</button>
-            <button class='btn-confirmer'>Confirmer</button>
+            <button class='btn-confirmer'><a href='index.php?controleur=controleurReservation&action=reserverExemplaire&numOuvrage=".$ouvrage->getNumOuvrage()."'>Confirmer</a></button>
         </div>
     </div>
 </div>

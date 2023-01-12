@@ -42,6 +42,7 @@ class ControleurUtilisateur {
         self::afficherNavBarGauche();
         echo "<div class='inline'>";
         if (isset($_GET['alerte'])) {
+            $alerte="ERREUR : L'ancien mot de passe ne correspond pas à celui indiqué";
             include ("vue/utilisateur/informationPerso/alerte.html");
         }
         foreach ($utilisateur as $u) {

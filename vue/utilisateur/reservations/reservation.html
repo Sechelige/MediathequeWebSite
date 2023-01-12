@@ -6,17 +6,17 @@ echo "
     <div class='auteur'>Auteur : ".$reservation->prenomAuteur." ".$reservation->nomAuteur."</div>
     <div class='isbn-ex'>ISBN : ".$reservation->isbnExemplaire."</div>
     <div class='langue-ex'>Langue : ".$reservation->langueExemplaire."</div>
-    <div class='date-reservation'>Date de réservation : ".$reservation->getDateReservation()."</div>
-    <div class='btn-annuler' onclick='confirmA(".$reservation->getNumReservation().")'>Annuler</div>
+    <div class='date-reservation'>Date de réservation : ".$reservation->get("dateReservation")."</div>
+    <div class='btn-annuler' onclick='confirmA(".$reservation->get("numReservation").")'>Annuler</div>
     </div>
 </div>
 
-<div class='confirm-annula' id='".$reservation->getNumReservation()."' style='display:none;'>
+<div class='confirm-annula' id='".$reservation->get("numReservation")."' style='display:none;'>
     <div class='body-annula'>
         <div class='head-confirm'>confirmer l'annulation ?</div>
         <div class='btn'>
-            <button class='btn-confirmer'><a href='index.php?controleur=controleurReservation&action=annulerReservation&numReservation=".$reservation->getNumReservation()."'>oui</a></button>
-            <button class='btn-annuler' onclick='confirmA(".$reservation->getNumReservation().")'>non</button>
+            <button class='btn-confirmer'><a href='index.php?controleur=controleurReservation&action=annulerReservation&numReservation=".$reservation->get("numReservation")."'>oui</a></button>
+            <button class='btn-annuler' onclick='confirmA(".$reservation->get("numReservation").")'>non</button>
         </div>
     </div>
 </div>

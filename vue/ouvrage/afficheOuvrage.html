@@ -1,11 +1,11 @@
 <?php
 echo "
 <div class='affiche-ouvrage'>
-    <img class='img-ouvrage' src='../../src/img/ouvrage/".$ouvrage->getNumOuvrage().".png' alt=''>
+    <img class='img-ouvrage' src='../../img/ouvrage/".$ouvrage->get("numOuvrage").".png' alt=''>
     <div class='container-info-ouvrage'>
-        <div class='titre-ouvrage'>".$ouvrage->getNomOuvrage()."</div>
+        <div class='titre-ouvrage'>".$ouvrage->get("nomOuvrage")."</div>
         <div class='resume-ouvrage'>Résumé :</br>
-            ".$ouvrage->getDescription()."
+            ".$ouvrage->get("description")."
         </div>
         <div class='info-tech'>
             <div class='auteur-ouvrage'>nom prenom</div>
@@ -21,11 +21,11 @@ echo "
 <div class='confirm-reserv' id='confirm' style='display:none;'>
     <div class='body-reserv'>
         <div class='head-confirm'>Reserver</div>
-        <div class='img'><img src='../../src/img/ouvrage/".$ouvrage->getNumOuvrage().".png' alt=''></div>
-        <div class='titre'>".$ouvrage->getNomOuvrage()."</div>
+        <div class='img'><img src='../../img/ouvrage/".$ouvrage->get("numOuvrage").".png' alt=''></div>
+        <div class='titre'>".$ouvrage->get("nomOuvrage")."</div>
         <div class='btn'>
             <button class='btn-annuler' onclick='confirm()'>Annuler</button>
-            <button class='btn-confirmer'><a href='index.php?controleur=controleurReservation&action=reserverExemplaire&numOuvrage=".$ouvrage->getNumOuvrage()."'>Confirmer</a></button>
+            <button class='btn-confirmer'><a href='index.php?controleur=controleurReservation&action=reserverExemplaire&numOuvrage=".$ouvrage->get("numOuvrage")."'>Confirmer</a></button>
         </div>
     </div>
 </div>

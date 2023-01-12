@@ -1,47 +1,11 @@
 <?php 
-class Ouvrage {
-    private $numOuvrage;
-    private $nomOuvrage;
-    private $consultationOuvrage;
-    private $description;
-    private $dateParutionOuvrage;
-    private $id_genre;
-
-    //getters
-    public function getNumOuvrage() {
-        return $this->numOuvrage;        
-    }
-    public function getNomOuvrage() {
-        return $this->nomOuvrage;        
-    }
-
-    public function getConsultationOuvrage() {
-        return $this->consultationOuvrage;        
-    }
-
-    public function getDescription() {
-        return $this->description;        
-    }
-
-    public function getDateParutionOuvrage() {
-        return $this->dateParutionOuvrage;        
-    }
-
-    public function getId_genre() {
-        return $this->id_genre;        
-    }
-
-    // Constructeur
-    public function __construct($numOuvrage = NULL, $nomOuvrage = NULL, $consultationOuvrage = NULL, $description = NULL, $dateParutionOuvrage = NULL, $id_genre = NULL) {
-        if (!is_null($numOuvrage) && !is_null($nomOuvrage) && !is_null($consultationOuvrage) && !is_null($description) && !is_null($dateParutionOuvrage) && !is_null($id_genre)) {
-            $this->numOuvrage = $numOuvrage;
-            $this->nomOuvrage = $nomOuvrage;
-            $this->consultationOuvrage = $consultationOuvrage;
-            $this->description = $description;
-            $this->dateParutionOuvrage = $dateParutionOuvrage;
-            $this->id_genre = $id_genre;
-        }
-    }
+class Ouvrage extends Model{
+    protected $numOuvrage;
+    protected $nomOuvrage;
+    protected $consultationOuvrage;
+    protected $description;
+    protected $dateParutionOuvrage;
+    protected $id_genre;
 
     // fonction qui permet de récupérer les données d'un ouvrage
     public static function getOuvrageByNumOuvrage($numOuvrage) {
@@ -61,5 +25,4 @@ class Ouvrage {
             echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
         }
     }
-
 }

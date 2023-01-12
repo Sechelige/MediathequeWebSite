@@ -1,7 +1,8 @@
 <?php 
+require_once ("model/model.php");
 require_once ("model/emprunt.php");
-require_once ("controleurUtilisateur.php");
 require_once ("model/exemplaire.php");
+require_once ("controleurUtilisateur.php");
 
 class controleurEmprunt {
 
@@ -23,7 +24,7 @@ class controleurEmprunt {
                 echo "<h2>Vous n'avez pas d'emprunt en cours</h2>";
             } else {
                 foreach ($tab_emprunt_non_rendu as $emprunt) {
-                    $exemplaire = Exemplaire::getNomOuvrageByNumExemplaire($emprunt->getnumExemplaire());
+                    $exemplaire = Exemplaire::getNomOuvrageByNumExemplaire($emprunt->get("numExemplaire"));
                     include "vue/utilisateur/emprunts/empruntUtilisateur.html";
                 }
             }
@@ -32,7 +33,7 @@ class controleurEmprunt {
                 echo "Vous n'avez pas encore d'emprunt rendu";
             } else {
                 foreach ($tab_emprunt_rendu as $emprunt) {
-                    $exemplaire = Exemplaire::getNomOuvrageByNumExemplaire($emprunt->getnumExemplaire());
+                    $exemplaire = Exemplaire::getNomOuvrageByNumExemplaire($emprunt->get("numExemplaire"));
                     include "vue/utilisateur/emprunts/empruntUtilisateur.html";
                 }
             }

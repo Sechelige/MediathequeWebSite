@@ -1,4 +1,5 @@
 <?php 
+require_once 'model/model.php';
 require_once 'model/Reservation.php';
 require_once "controleur/controleurUtilisateur.php";
 
@@ -9,7 +10,7 @@ class ControleurReservation {
         include("vue/debut.php");
         $utilisateur = ControleurUtilisateur::getNumUtilisateur();
         include ("vue/header-one/header.php");
-        $tab_reservation = Reservation::getReservationByNumUtilisateur(1);
+        $tab_reservation = Reservation::getReservationByNumUtilisateur($utilisateur);
         ControleurUtilisateur::afficherNavBarGauche(3);
         echo "<div class='inline'>";
         foreach ($tab_reservation as $reservation) {

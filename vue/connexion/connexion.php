@@ -1,7 +1,3 @@
-<?php
-$titre = "Connexion";
-include "../../vue/navbar.html";
-?>
 <div class="connexion">
     <h1>Connexion</h1>
     <form action="connexion.php" method="post">
@@ -12,4 +8,3 @@ include "../../vue/navbar.html";
         <input type="submit" value="Se connecter">
     </form>
 </div>
-

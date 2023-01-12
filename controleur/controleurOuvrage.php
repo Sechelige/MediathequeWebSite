@@ -1,5 +1,5 @@
 <?php
-
+require_once ("model/model.php");
 require_once ("model/ouvrage.php");
 
 class controleurOuvrage {

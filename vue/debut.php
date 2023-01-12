@@ -20,3 +20,4 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inder">
     <title><?php echo $titre ?></title>
 </head>
+<body>

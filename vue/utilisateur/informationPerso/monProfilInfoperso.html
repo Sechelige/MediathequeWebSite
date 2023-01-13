@@ -3,32 +3,84 @@ echo"
 <div class='mes-infos'>
         <div class='infoperso'>
             <div class='titre-info'>INFORMATION PERSONNELLES</div>
-            <div class='mini-titre'>Nom</div>
-            <div class='info'>".$u->get("nomUtilisateur")."</div>
-            <div class='mini-titre'>Prenom</div>
-            <div class='info'>".$u->get("prenomUtilisateur")."</div>
-            <div class='mini-titre'>E-mail</div>
-            <div class='info'>".$u->get("emailUtilisateur")."</div>
-            <div class='mini-titre'>N° Telephone</div>
-            <div class='info'>".$u->get("telUtilisateur")."</div>
-            <div class='mini-titre'>Date de naissance</div>
-            <div class='info'>".$u->get("dateNaissanceUtilisateur")."</div>
-            <div class='centre-mdp'>
-            <div class='mini-titre'>Mot de passe
-            <button class='btn-modifier' onclick='modifmdp()'>Modifier</button>
+            <div class='info-content'>
+                <div class='self-info-content'>
+                    <div class='mini-titre'>Nom</div>
+                    <div class='info'>".$u->get("nomUtilisateur")."</div>
+                </div>
+                <div  class='self-info-content'>
+                    <div class='mini-titre'>Prenom</div>
+                    <div class='info'>".$u->get("prenomUtilisateur")."</div>
+                </div>
+                <div  class='self-info-content'>
+                    <div class='mini-titre'>E-mail</div>
+                    <div class='info'>".$u->get("emailUtilisateur")."</div>
+                </div>
+                <div  class='self-info-content'>
+                    <div class='mini-titre'>N° Telephone</div>
+                    <div class='info'>".$u->get("telUtilisateur")."</div>
+                </div>
+                <div  class='self-info-content'>
+                    <div class='mini-titre'>Genre</div>
+                    <div class='info'>Male</div>
+                </div>
+                <div  class='self-info-content'>
+                    <div class='mini-titre'>Date de naissance</div>
+                    <div class='info'>".$u->get("dateNaissanceUtilisateur")."</div>
+                </div>
+                <div  class='self-info-content'>
+                    <div class='centre-mdp'></div>
+                    <div class='mini-titre'>Mot de passe </div>
+                    <div class='info'>
+                        <button class='btn-modifier' onclick='modifmdp()'>Modifler</button>
+                        ".$u->get("mdpUtilisateur")."
+                    </div>
+                </div>                    
             </div>
-            <div class='info'>".$u->get("mdpUtilisateur")."</div>
-        </div>
         </div>
 
-        <div class='info-scolaire'>
-            <div class='info-scol'>INFORMATION SCOLAIRE</div>
-            <div class='mini-titre'>Etablissement scolaire</div>
-            <div class='info'>".$u->get("lieuUtilisateur")."</div>
-            <div class='mini-titre'>Formation</div>
-            <div class='info'>".$u->get("etudeUtilisateur")."</div>
+        <div class='info-scolaire'>            
+            <div class='titre-info'>INFORMATION SCOLAIRE</div>
+            <div class='info-content'>
+                <div class='self-info-content'>
+                    <div class='mini-titre'>Etablissement scolaire</div>
+                    <div class='info'>".$u->get("lieuUtilisateur")."</div>
+                </div>
+                <div class='self-info-content'>
+                    <div class='mini-titre'>Formation</div>
+                    <div class='info'>".$u->get("etudeUtilisateur")."</div>
+                </div>
+                
+                
+               
+            </div>
         </div>
-    </div>
+
+        <div class='info-scolaire'>            
+            <div class='titre-info'>INFORMATION BIBLIOTHEQUE</div>
+            <div class='info-content'>
+                <div class='self-info-content'>
+                    <div class='mini-titre'>Nombre de livres empruntés</div>
+                    <div class='info'>3</div>
+                </div>
+                <div class='self-info-content'>
+                    <div class='mini-titre'>Nombre de livres réservés</div>
+                    <div class='info'>99</div>
+                </div>
+                <div class='self-info-content'>
+                    <div class='mini-titre'>Nombre de retard</div>
+                    <div class='info'>".$u->get("nbRetardUtilisateur")."</div>
+                </div>
+                <div class='self-info-content'>
+                    <div class='mini-titre'>Etat du compte</div>
+                    <div class='info'>Valide</div>
+                </div>
+                <div class='self-info-content'>
+                    <div class='mini-titre'>Etat du compte</div>
+                    <div class='info'>Valide</div>
+                </div>       
+            </div>
+        </div>
 
     <div class='modifmdp' id='modifmdp' style='display: none;' >
         <div class='body-modifmdp'>

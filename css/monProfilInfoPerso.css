@@ -3,29 +3,18 @@
         vertical-align: top;
         display: inline-block;
         margin-top: 0;
-        width: 100%;
         height: 100vh;
         background-color: white;
+        display: flex;
+        flex-direction: column;
     }
 
-    .infoperso {
+    .infoperso, .info-scolaire {
         display: inline-block;
-        margin-left: 3rem;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
         padding: 20px;
-        margin-top: 2rem;
+        width: 85vw;
     }
 
-    .info-scolaire {
-        display: inline-block;
-        vertical-align: top;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-        padding: 20px;
-        margin-left: 5rem;
-        margin-top: 2rem;
-    }
 
     .titre-mes-infos {
         display: flex;
@@ -41,12 +30,41 @@
     .titre-info {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
+        font-family: Raleway;
         align-items: center;
         width: 100%;
+        margin-top: 2vh;
         font-size: 1.5rem;
-        font-weight: bold;
-        text-decoration: underline;
+        font-weight: lighter;
+        user-select: none;
+    }
+
+    .titre-info::before {
+        content: '';
+        margin-left: 10vh;
+        margin-right: 1%;
+        width: 10%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .titre-info::after {
+        content: '';
+        width: 55%;        
+        margin-left: 1%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .info-content {
+        margin-left: 10vh;
+        margin-right: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
 
     .info-scol {
@@ -66,17 +84,43 @@
         justify-content: start;
         align-items: center;
         width: 100%;
-        color: red;
+        color: black;
         font-size: 1rem;
         margin-top: 0.75rem;
     }
 
+    .self-info-content{
+        margin-top: 1em;
+        flex: 0 0 16%;
+        position: relative;
+    }
+
     .info {
+        overflow: hidden;
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: start;
         align-items: center;
         width: 100%;
         font-size: 1.2rem;
-        margin-top: 0.1rem;
-    }    
+        margin-top: 0.2rem;
+        padding: 0.4em;
+        cursor:default;
+        user-select: none;
+        font-weight: bold;
+        border-left: 0.5px solid rgb(167, 167, 167);
+    }
+
+    .btn-modifier{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -200%;
+        transition: 400ms;
+        font-family: Raleway;
+    }
+
+    .self-info-content:hover .btn-modifier {
+        left: -15%;
+    }

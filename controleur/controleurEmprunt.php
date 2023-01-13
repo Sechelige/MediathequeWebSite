@@ -41,4 +41,9 @@ class controleurEmprunt {
     }
         echo "</body> </html>";
     }
+
+    public static function nbEmpruntEnCours($n) {
+        $nbEmprunt = Emprunt::getNbEmpruntEnCours($n);
+        return $nbEmprunt;
+    }
 }

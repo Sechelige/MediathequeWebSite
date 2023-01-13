@@ -1,6 +1,8 @@
 <?php
 require_once ("model/model.php");
 require_once ("model/utilisateur.php");
+require_once ("controleur/controleurReservation.php");
+require_once ("controleur/controleurEmprunt.php");
 
 class ControleurUtilisateur {
 
@@ -35,9 +37,12 @@ class ControleurUtilisateur {
 
     //affichage des infos perso d'un utilisateur 
    public static function afficherUtilisateurInfoPerso() {
+        $etatCompte = "Valide";
         $numUtilisateur = self::getNumUtilisateur();
         $utilisateur = self::getUtilisateur();
         $titre = "Mes Informations Personnelles";
+        $nbReservation = ControleurReservation::nbReservation($numUtilisateur);
+        $nbEmprunt = ControleurEmprunt::nbEmpruntEnCours($numUtilisateur);
         include("vue/debut.php");
         include ("vue/header-one/header.php");
         self::afficherNavBarGauche(1);
@@ -47,6 +52,14 @@ class ControleurUtilisateur {
             include ("vue/utilisateur/informationPerso/alerte.html");
         }
         foreach ($utilisateur as $u) {
+            if ($u->get("bloqueUtilisateur") == 1) {
+                $etatCompte = "Bloqué";
+            }
+            if ($u->get("genreUtilisateur") == 1) {
+                $genre = "Homme";
+            } else {
+                $genre = "Femme";
+            }
             include ("vue/utilisateur/informationPerso/monProfilInfoperso.html");
         }
         echo "</div>";

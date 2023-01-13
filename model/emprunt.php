@@ -53,4 +53,11 @@ class Emprunt extends Model{
             return false;
         return $tab_emprunt_EnCours;
     }
+
+    public static function getNbEmpruntEncours($numUtilisateur) {
+        $tab_emprunt = Emprunt::getEmpruntEncours($numUtilisateur);
+        if ($tab_emprunt == false)
+            return 0;
+        return count($tab_emprunt);
+    }
 }

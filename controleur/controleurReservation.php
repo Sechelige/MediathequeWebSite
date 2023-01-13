@@ -33,6 +33,10 @@ class ControleurReservation {
 
     public static function reserverExemplaire(){
         echo "reserverOuvrage";
-  
+    }
+
+    public static function nbReservation($n){
+        $nbReservation = Reservation::getNbReservationByNumUtilisateur($n);
+        return $nbReservation;
     }
 }

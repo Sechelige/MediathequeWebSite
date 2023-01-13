@@ -8,8 +8,8 @@ class Ouvrage extends Model{
     protected $id_genre;
 
     // fonction qui permet de récupérer les données d'un ouvrage
-    public static function getOuvrageByNumOuvrage($numOuvrage) {
-        $sql = "SELECT * FROM Ouvrage WHERE numOuvrage=:numOuvrage";
+    public static function getOuvrageEtInfoByNumOuvrage($numOuvrage) {
+        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR where numOuvrage =:numOuvrage";
         try {
             $req_prep = Connexion::pdo()->prepare($sql);
             $values = array(

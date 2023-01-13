@@ -6,7 +6,7 @@ class controleurOuvrage {
 
     public static function getOuvrageGet() {
         $numOuvrage = $_GET["numOuvrage"];
-        $ouvrage = Ouvrage::getOuvrageByNumOuvrage($numOuvrage);
+        $ouvrage = Ouvrage::getOuvrageEtInfoByNumOuvrage($numOuvrage);
         return $ouvrage;
     }
     public static function afficheOuvrage() {

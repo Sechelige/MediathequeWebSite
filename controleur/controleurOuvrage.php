@@ -1,6 +1,7 @@
 <?php
 require_once ("model/model.php");
 require_once ("model/ouvrage.php");
+require_once ("controleur/controleurExemplaire.php");
 
 class controleurOuvrage {
 
@@ -9,6 +10,7 @@ class controleurOuvrage {
         $ouvrage = Ouvrage::getOuvrageEtInfoByNumOuvrage($numOuvrage);
         return $ouvrage;
     }
+
     public static function afficheOuvrage() {
         $tab_ouvrage = self::getOuvrageGet();
         $titre = "Ouvrage";     
@@ -17,10 +19,12 @@ class controleurOuvrage {
         if ($tab_ouvrage != false) {
             foreach ($tab_ouvrage as $ouvrage) {
                 include "vue/ouvrage/afficheOuvrage.html";
+                ControleurExemplaire::afficheExemplaireOuvrage($ouvrage->get("numOuvrage"));
             }
         } else {
             echo "Aucun ouvrage trouvé";
         }
+        echo "</div></div>";
         echo "</body> </html>";
     }
 }

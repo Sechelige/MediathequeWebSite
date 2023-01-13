@@ -17,7 +17,7 @@ class Utilisateur extends Model{
     protected $numCatégorie;
 
     //check Utilisateur password
-    	public static function checkMDP($l,$m) {
+    public static function checkMDP($l,$m) {
 		$requetePreparee = "SELECT * FROM utilisateur WHERE login = :l_tag and mdp = :m_tag;";
 		$req_prep = connexion::pdo()->prepare($requetePreparee);
 		$valeurs = array(

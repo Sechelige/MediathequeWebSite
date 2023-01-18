@@ -1,0 +1,13 @@
+<?php 
+echo " 
+<tr>
+    <td><div class='titre-ouv'>".$exemplaire->nomOuvrage." // ".$exemplaire->get("numExemplaire")." </div></td>
+    <td><div class='isbn'>".$exemplaire->get("isbnExemplaire")."</div></td>
+    <td> <div class='format'>".$exemplaire->nomFormat."</div></td>
+    <td><div class='editeur'>".$exemplaire->nomEditeur."</div></td>
+    <td><div class='nb-page'>".$exemplaire->get("nbPageExemplaire")."</div></td>
+    <td><div class='langue'>".$exemplaire->langue."</div></td>
+    <td>Indisponible</td>
+</tr>
+"
+?>

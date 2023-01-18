@@ -27,12 +27,19 @@ class ControleurReservation {
 
     public static function annulerReservation() {
         $numReservation = $_GET["numReservation"];
+        $numExemplaire = $_GET["numExemplaire"];
+        Exemplaire::setEstReserveExemplaire(0, $numExemplaire);
         Reservation::supprimerReservation($numReservation);
         header("Location: index.php?controleur=controleurReservation&numUtilisateur=1");
     }
 
     public static function reserverExemplaire(){
-        echo "reserverOuvrage";
+        echo "reserverExemplaire";
+        $numExemplaire = $_GET["numExemplaire"];
+        $numUtilisateur = $_GET["numUtilisateur"];
+        Exemplaire::setEstReserveExemplaire(1, $numExemplaire);
+        Reservation::reserverExemplaire($numExemplaire, $numUtilisateur);
+        header("Location: index.php?controleur=controleurReservation&numUtilisateur=1");
     }
 
     public static function nbReservation($n){

@@ -70,24 +70,3 @@
 .genre {
     margin-left: 1rem;
 }
-
-.btn-ouvrage {
-    display: flex;
-    justify-content: end;
-    margin-left: 1rem;
-}
-
-.reserver {
-    margin-top: 1.5rem;
-    background-color: #1e90ff;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.reserver:hover {
-    cursor: pointer;
-}

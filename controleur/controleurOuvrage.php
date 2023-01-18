@@ -24,7 +24,6 @@ class controleurOuvrage {
         } else {
             echo "Aucun ouvrage trouvé";
         }
-        echo "</div></div>";
         echo "</body> </html>";
     }
 }

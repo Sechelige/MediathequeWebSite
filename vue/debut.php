@@ -17,7 +17,7 @@
     <link rel='stylesheet' href='css/footer.css'>
     <link rel='stylesheet' href='css/alerte.css'>
     <link rel='stylesheet' href='css/modifmdp.css'>
-    <link rel='stylesheet' href='css/afficheExemplaire.css'>
+    <link rel='stylesheet' href='css/exemplaire.css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inder">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">

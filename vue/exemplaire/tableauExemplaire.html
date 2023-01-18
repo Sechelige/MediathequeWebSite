@@ -1,0 +1,36 @@
+<?php
+echo "   
+<tr>
+    <td><div class='titre-ouv'>".$exemplaire->nomOuvrage." // ".$exemplaire->get("numExemplaire")." </div></td>
+    <td><div class='isbn'>".$exemplaire->get("isbnExemplaire")."</div></td>
+    <td> <div class='format'>".$exemplaire->nomFormat."</div></td>
+    <td><div class='editeur'>".$exemplaire->nomEditeur."</div></td>
+    <td><div class='nb-page'>".$exemplaire->get("nbPageExemplaire")."</div></td>
+    <td><div class='langue'>".$exemplaire->langue."</div></td>
+    <td><button class='reserver-ex' onclick='confirmReservation(".$exemplaire->get("isbnExemplaire").")'>Reserver</button></td>
+</tr>
+
+<div class='confirm-reserv' id='".$exemplaire->get("isbnExemplaire")."' style='display:none;'>
+    <div class='body-reserv'>
+        <div class='head-confirm'>Reserver</div>
+        <div class='img'><img src='../../img/ouvrage/".$exemplaire->get("numOuvrage").".png' alt=''></div>
+        <div class='titre'>".$exemplaire->nomOuvrage."</div>
+        <div class='btn-reserv'>
+            <button class='btn-annuler-reserv' onclick='confirmReservation(".$exemplaire->get("isbnExemplaire").")'>Annuler</button>
+            <button class='btn-confirmer-reserv'><a href='index.php?controleur=controleurReservation&action=reserverExemplaire&numUtilisateur=1&numExemplaire=".$exemplaire->get("numExemplaire")."'>Confirmer</a></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function confirmReservation(a) {
+        var confirmA = document.getElementById(a);
+        if (confirmA.style.display == 'none') {
+            confirmA.style.display = 'block';
+        } else {
+            confirmA.style.display = 'none';
+        }
+    }
+</script>
+";
+?>

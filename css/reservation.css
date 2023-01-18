@@ -1,4 +1,3 @@
-
 .reservation {
   vertical-align: top;
   display: inline-block;
@@ -51,3 +50,65 @@
   align-items: center;
 }
 
+
+
+
+.confirm-annula {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.body-annula {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.head-confirm {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 10px 10px 0 0;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.btn button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-confirmer-annuler-res {
+  background-color: red;
+  color: white;
+}
+
+.btn-confirmer-annuler-res {
+  background-color: green;
+  color: white;
+}

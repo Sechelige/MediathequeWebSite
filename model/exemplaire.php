@@ -87,4 +87,15 @@ class Exemplaire extends Model{
             return false;
         return $tab_exemplaire;
     }
+
+    //update estReserveExemplaire = 1
+    public static function setEstReserveExemplaire($estReserveExemplaire, $numExemplaire) {
+        $sql = "UPDATE Exemplaire SET estReserveExemplaire=:estReserveExemplaire WHERE numExemplaire=:numExemplaire";
+        $req_prep = Connexion::pdo()->prepare($sql);
+        $values = array(
+            "estReserveExemplaire" => $estReserveExemplaire,
+            "numExemplaire" => $numExemplaire,
+        );
+        $req_prep->execute($values);
+    }
 }

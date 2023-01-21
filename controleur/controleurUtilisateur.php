@@ -6,8 +6,8 @@ require_once ("controleur/controleurEmprunt.php");
 
 class ControleurUtilisateur {
 
-    //recuperation du numUtilisateur par POST
-    public static function getNumUtilisateur() {
+    //recuperation du numUtilisateur par GET
+    public static function getNumUtilisateur() {                // a changer avec la session
         if (isset($_GET['numUtilisateur'])) {
             return $_GET['numUtilisateur'];
         } else {
@@ -16,7 +16,7 @@ class ControleurUtilisateur {
     }
 
     //recuperation tableau information utilisateur 
-    public static function getUtilisateur() {
+    public static function getUtilisateur() {                   
         $numUtilisateur = self::getNumUtilisateur();
         if ($numUtilisateur != null) {
             $utilisateur = Utilisateur::getUtilisateurByNum($numUtilisateur);
@@ -49,7 +49,8 @@ class ControleurUtilisateur {
         echo "<div class='inline'>";
         if (isset($_GET['alerte'])) {
             $alerte="L'ancien mot de passe ne correspond pas à celui indiqué.";
-            include ("vue/utilisateur/informationPerso/alerte.html");
+            $lienFermerAlerte = "/index.php?controleur=controleurUtilisateur&numUtilisateur=1";
+            include ("vue/alerte.html");
         }
         foreach ($utilisateur as $u) {
             if ($u->get("bloqueUtilisateur") == 1) {

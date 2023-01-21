@@ -9,6 +9,7 @@ class ControleurExemplaire {
         if ($tab_exemplaire != false) {
                 include "vue/exemplaire/tableauExemplaireDebut.html";
                 foreach ($tab_exemplaire as $exemplaire) {
+                    //verifie si l'exemplaire n'est pas déjà reservé
                     if ($exemplaire->get("estReserveExemplaire") == 0){
                         include "vue/exemplaire/tableauExemplaire.html";
                     }
@@ -19,6 +20,6 @@ class ControleurExemplaire {
         } else {
             echo "Aucun exemplaire trouvé pour cet ouvrage";
         }
-        echo "</tbody></table>";
+        echo "</tbody></table>";//à changer
     }
 }

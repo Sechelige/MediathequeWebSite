@@ -22,7 +22,9 @@ class controleurOuvrage {
                 ControleurExemplaire::afficheExemplaireOuvrage($ouvrage->get("numOuvrage"));
             }
         } else {
-            echo "Aucun ouvrage trouvé";
+            $alerte="Erreur ouvrage non trouvé dans la base de données";
+            $lienFermerAlerte = "/index.php?controleur=acceuil&action=afficheAcceuil";
+            include ("vue/alerte.html");
         }
         echo "</body> </html>";
     }

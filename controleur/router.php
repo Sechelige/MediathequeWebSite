@@ -6,7 +6,7 @@ $action = "afficheAcceuil";
 
 $tableauControleur = ["controleurUtilisateur","controleurEmprunt","controleurReservation","controleurOuvrage","controleurAcceuil","controleurConnexion","controleurRecherche"];
 $actionParDefaut = array(
-    "controleurUtilisateur" => "afficherUtilisateurInfoPerso",
+    "controleurUtilisateur" => array("afficherUtilisateurInfoPerso","afficherFormulaireConnexion"),
     "controleurEmprunt" => "afficherEmprunt",
     "controleurReservation" => "afficherReservation",
     "controleurOuvrage" => "afficheOuvrage",

@@ -112,13 +112,13 @@ label {
     align-items: center;
 }
 
-input {
+.input-modifmdp > input {
     padding: 1em;
     border: 0px;
     width: 100%;
 }
 
-input:focus {
+.input-modifmdp > input:focus {
     border: none;
     border-radius: none;
     outline:0;

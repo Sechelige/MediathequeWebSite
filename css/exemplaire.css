@@ -1,19 +1,4 @@
-.demTable {
-  border: 1px solid;
-  border-collapse: collapse;
-  border-spacing: 6px;
-  width: 70%;
-}
-.demTable th {
-  border: 1px solid;
-  background: #91a0ba;
-  color: #313030;
-}
-.demTable td {
-  border: 1px solid;
-  text-align: center;
-  background: #a58d8d;
-}
+
 
 .confirm-reserv {
   position: fixed;

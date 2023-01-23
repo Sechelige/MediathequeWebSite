@@ -81,4 +81,31 @@ class ControleurUtilisateur {
             header("Location: index.php?controleur=controleurUtilisateur&action=afficherUtilisateurInfoPerso&numUtilisateur=1&alerte=1");
         }   
     }
+
+    public static function afficherFormulaireConnexion(){
+        include("vue/debut.php");
+        include("vue/connexion/connexion.php");
+        include("vue/footer.html");
+    }
+
+    public static function connecterUtilisateur(){
+        $login = $_POST["login"];
+        $mdp = $_POST["mdp"];
+
+        $b = Utilisateur::checkMDP($login, $mdp);
+
+        if($b){
+            $_SESSION["login"] = $_POST["login"];
+            ControleurAcceuil::afficheAcceuil();
+        } else{
+            self::afficherFormulaireConnexion();
+        }
+    }
+
+    public static function deconnecterUtilisateur(){
+        session_unset();
+        session_destroy();
+        setcookie(session_name(), '', time()-1);
+        self::afficherFormulaireConnexion();
+    }
 }

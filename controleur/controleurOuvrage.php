@@ -11,6 +11,11 @@ class controleurOuvrage {
         return $ouvrage;
     }
 
+    public static function getAllOuvrage() {
+        $tab_ouvrage = Ouvrage::getAllOuvrageEtInfo();
+        return $tab_ouvrage;
+    }
+
     public static function afficheOuvrage() {
         $tab_ouvrage = self::getOuvrageGet();
         $titre = "Ouvrage";     

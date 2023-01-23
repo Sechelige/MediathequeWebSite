@@ -25,4 +25,20 @@ class Ouvrage extends Model{
             echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
         }
     }
+
+    // fonction qui permet de recuperer tout les ouvrages et leur informations
+    public static function getAllOuvrageEtInfo() {
+        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR";
+        try {
+            $req_prep = Connexion::pdo()->prepare($sql);
+            $req_prep->execute();
+            $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Ouvrage');
+            $tab_ouvrage = $req_prep->fetchAll();
+            if (empty($tab_ouvrage))
+                return false;
+            return $tab_ouvrage;
+        } catch (PDOException $e) {
+            echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
+        }
+    }
 }

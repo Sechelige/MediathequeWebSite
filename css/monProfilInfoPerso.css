@@ -12,7 +12,6 @@
     .infoperso, .info-scolaire {
         display: inline-block;
         padding: 20px;
-        width: 85vw;
     }
 
 
@@ -35,7 +34,7 @@
         align-items: center;
         width: 100%;
         margin-top: 2vh;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: lighter;
         user-select: none;
     }
@@ -73,7 +72,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: bold;
         text-decoration: underline;
     }
@@ -123,4 +122,9 @@
 
     .self-info-content:hover .btn-modifier {
         left: -15%;
+    }
+
+    #pencil {
+        color: black;
+        margin-left: 5%;
     }

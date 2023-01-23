@@ -140,7 +140,8 @@ header {
     user-select: none;
     font-family: Inter;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em;
+    text-align: justify;
     padding-left: 10%;
 }
 

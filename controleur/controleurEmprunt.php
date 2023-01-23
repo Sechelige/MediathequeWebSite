@@ -22,7 +22,9 @@ class controleurEmprunt {
             echo "<h2>Vous n'avez jamais emprunté d'exemplaire !</h2>";// à changer avec un include de la vue
         } else {
             //affichage des emprunts en cours 
+            
             echo "<h2>Emprunt en cours...</h2>";
+            echo "<div class='emprunt'>";
             if ($tab_emprunt_non_rendu == false) {
                 echo "<h2>Vous n'avez pas d'emprunt en cours</h2>"; // à changer avec un include de la vue
             } else {
@@ -31,8 +33,11 @@ class controleurEmprunt {
                     include "vue/utilisateur/emprunts/empruntUtilisateur.html";
                 }
             }
+            echo "</div>";
+            
             //affichage des emprunts rendus
             echo "<h2>Emprunt rendu</h2>";// à changer avec un include de la vue
+            echo "<div class='rendu'>";
             if ($tab_emprunt_rendu == false) {
                 echo "Vous n'avez pas encore d'emprunt rendu";
             } else {
@@ -41,6 +46,7 @@ class controleurEmprunt {
                     include "vue/utilisateur/emprunts/empruntUtilisateur.html";
                 }
             }
+            echo "</div>";
             echo "</div>";
         }
         echo "</body> </html>";

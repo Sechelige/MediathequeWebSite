@@ -46,7 +46,7 @@ class ControleurUtilisateur {
         include("vue/debut.php");
         include ("vue/header-one/header.php");
         self::afficherNavBarGauche(1);
-        echo "<div class='inline'>";
+        echo "<div class='inline selfinfo'>";
         if (isset($_GET['alerte'])) {
             $alerte="L'ancien mot de passe ne correspond pas à celui indiqué.";
             $lienFermerAlerte = "/index.php?controleur=controleurUtilisateur&numUtilisateur=1";

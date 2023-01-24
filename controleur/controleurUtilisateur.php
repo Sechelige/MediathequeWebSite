@@ -25,15 +25,6 @@ class ControleurUtilisateur {
             return null;
         }
     }
-
-    //affichage de la navBarGauche en fonction du numUtilisateur
-    public static function afficherNavBarGauche($t) {
-        $numUtilisateur = self::getNumUtilisateur();
-        $utilisateur = self::getUtilisateur();
-        foreach ($utilisateur as $u) {
-            include ("vue/navBarGauche.html");
-        }
-    }
     
     //affichage des infos perso d'un utilisateur 
    public static function afficherUtilisateurInfoPerso() {
@@ -45,7 +36,7 @@ class ControleurUtilisateur {
         $nbEmprunt = ControleurEmprunt::nbEmpruntEnCours($numUtilisateur);
         include("vue/debut.php");
         include ("vue/header-one/header.php");
-        self::afficherNavBarGauche(1);
+        include ("vue/navBarInfo.html");
         echo "<div class='inline selfinfo'>";
         if (isset($_GET['alerte'])) {
             $alerte="L'ancien mot de passe ne correspond pas à celui indiqué.";
@@ -82,30 +73,5 @@ class ControleurUtilisateur {
         }   
     }
 
-    public static function afficherFormulaireConnexion(){
-        include("vue/debut.php");
-        include("vue/connexion/connexion.php");
-        include("vue/footer.html");
-    }
-
-    public static function connecterUtilisateur(){
-        $login = $_POST["login"];
-        $mdp = $_POST["mdp"];
-
-        $b = Utilisateur::checkMDP($login, $mdp);
-
-        if($b){
-            $_SESSION["login"] = $_POST["login"];
-            ControleurAcceuil::afficheAcceuil();
-        } else{
-            self::afficherFormulaireConnexion();
-        }
-    }
-
-    public static function deconnecterUtilisateur(){
-        session_unset();
-        session_destroy();
-        setcookie(session_name(), '', time()-1);
-        self::afficherFormulaireConnexion();
-    }
+    
 }

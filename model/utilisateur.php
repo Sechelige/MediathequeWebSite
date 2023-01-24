@@ -51,14 +51,6 @@ class Utilisateur extends Model{
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':numUtilisateur' => $numUtilisateur, ':mdpUtilisateur' => $mdpUtilisateur));
     }
-
-    //navBar de l'utilisateur
-    public static function afficheNavBarGauche ($numUtilisateur) {
-        $tab = Utilisateur::getUtilisateurByNum($numUtilisateur);
-        foreach ($tab as $u) {
-            include ("../../vue/utilisateur/navBarGauche.html");
-        }
-    }
 }
 
 ?>

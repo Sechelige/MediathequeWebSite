@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>    
     <link rel='stylesheet' href='css/reset.css'>
     <link rel='stylesheet' href='css/navBar.css'>
-    <link rel='stylesheet' href='css/navBarGauche.css'>
+    <link rel='stylesheet' href='css/navBarInfo.css'>
     <link rel='stylesheet' href='css/monProfilInfoPerso.css'>
     <link rel='stylesheet' href='css/empruntUtilisateur.css'>
     <link rel='stylesheet' href='css/reservation.css'>

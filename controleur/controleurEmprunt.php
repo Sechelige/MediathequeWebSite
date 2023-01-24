@@ -16,7 +16,7 @@ class controleurEmprunt {
         $titre = "Mes Emprunts";
         include("vue/debut.php");
         include ("vue/header-one/header.php");
-        ControleurUtilisateur::afficherNavBarGauche(2);
+        include ("vue/navBarInfo.html");
         echo "<div class='inline'>";
         if ($tab_emprunt_rendu == false && $tab_emprunt_non_rendu == false) {
             echo "<h2>Vous n'avez jamais emprunté d'exemplaire !</h2>";// à changer avec un include de la vue

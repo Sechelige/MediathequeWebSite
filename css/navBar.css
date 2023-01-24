@@ -120,6 +120,7 @@ nav .nav-links li:hover {
     cursor: pointer;
 }
 nav .extend-nav-connect ul {
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

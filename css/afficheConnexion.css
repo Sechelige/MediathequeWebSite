@@ -5,15 +5,7 @@ form {
 }
 
 
-input {
-    padding: 5px;
-    border: 1px solid #ccc;
-}
 
 label {
     margin: 10px;
-}
-
-h1 {
-    text-align: center;
 }

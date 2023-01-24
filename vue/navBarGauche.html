@@ -1,4 +1,4 @@
-<div class='nav-info-gauche' >
+<!--<div class='nav-info-gauche' >
     <div class='affiche-profil <?php if ($t == 1) echo "first" ?>'>
         <img src='img/profil.png'>
         <div class='nom-prenom'>
@@ -8,11 +8,65 @@
 
     </div>
     <div class='lien'>
-        <div class='lien-info <?php if ($t == 1) echo "into"?><?php if ($t == 2) echo "before" ?>' ><a href='index.php?controleur=controleurUtilisateur&numUtilisateur=1'>Mes Informations</a></div>
-        <div class='lien-emprunt <?php if ($t == 2) echo "into" ?> <?php if ($t == 3) echo "before" ?>'><a href='index.php?controleur=controleurEmprunt&numUtilisateur=1'>Mes Emprunts</a></div>
+        <div class='lien-info <?php if ($t == 1) echo "into"?><?php if ($t == 2) echo "before" ?>' ></div>
+        <div class='lien-emprunt <?php if ($t == 2) echo "into" ?> <?php if ($t == 3) echo "before" ?>'></div>
         <div class='lien-reservation <?php if ($t == 3) echo "into" ?>'><a href='index.php?controleur=controleurReservation&numUtilisateur=1'>Mes Reservations</a></div>
     </div>
     <div class='nav-info-footer <?php if ($t == 3) echo "last"?>'>
 
     </div>
+</div>-->
+
+<div class="nav-info">
+    <div class="lien-info-global">
+        <div class="lien-info-perso"><a href='index.php?controleur=controleurUtilisateur&numUtilisateur=1'>Informations Perssonnel</a></div>
+        <div class="lien-liste-emprunt"><a href='index.php?controleur=controleurEmprunt&numUtilisateur=1'>Emprunts</a></div>
+        <div class="lien-liste-reservation"><a href='index.php?controleur=controleurReservation&numUtilisateur=1'>Reservations</a></div>
+    </div>
 </div>
+
+<style>
+    .nav-info  a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav-info{
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #386641
+    }
+    
+    .lien-info-global{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .lien-info-global .lien-info-perso{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .lien-info-global .lien-liste-emprunt{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
+
+    .lien-info-global .lien-liste-reservation{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+</style>

@@ -81,7 +81,3 @@
     font-weight: bold;
     color: #BC4749;
 }
-
-li:nth-child(odd){
-    background-color: #a7c95744;
-}

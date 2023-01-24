@@ -34,7 +34,7 @@ class ControleurUtilisateur {
             include ("vue/navBarGauche.html");
         }
     }
-
+    
     //affichage des infos perso d'un utilisateur 
    public static function afficherUtilisateurInfoPerso() {
         $etatCompte = "Valide";

@@ -1,37 +1,19 @@
-.inline {
-    position: relative;
-    display: inline-block;
-    width: 85%;
-    max-height: 93vh;
-    min-height: 93vh;
-    vertical-align: top;
-}
 
-.inline:not(.selfinfo) {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    top: 7%;
-    left: 15%;
-    width: 85%;
-    height: 93%;
-}
 
-.inline h2 {
-    position: absolute;
-}
 
 .emprunt {
     position: relative;
     width: 100%;
     max-height: 100%;
-    border: 1px solid;
 
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-left: 3vh;
+
+    flex: 30%;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 
@@ -44,4 +26,9 @@
 .div-img > img {
     width: 5rem;
     height: 100%;
+    margin-right: 3vh;
+}
+
+.info-emprunt{
+    width: 50%;
 }

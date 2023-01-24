@@ -22,26 +22,34 @@
     align-items: center;
 }
 
+.recherche_content > div:first-child {
+    width: 100%;
+    position: relative;
+    
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
+}
 
 .result {
-    height: 15%;
     width: 100%;
 }
 
-
 .recheche_section input {
-    position: relative;
-    width: 99%;
+    position: relative;    
+    border: none;
+    width: 70%;
     height: 50px;
     font-size: 1em;
-    padding: 5px;
+    padding-left: 10px;
 }
 
 
 .recheche_section input:focus {
-    border: 1px solid #ccc;
     border-radius: none;
+    border: none;
     outline:0;
 }
 
@@ -74,8 +82,11 @@
     border-bottom: 1px solid  #ccc;
 }
 
-.voirtout p {
+.voirtout a {
     font-weight: bolder;
+    color: black;
+    text-decoration: none;
+    font-family: Raleway;
 }
 
 .auteurc {

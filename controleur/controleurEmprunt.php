@@ -30,7 +30,7 @@ class controleurEmprunt {
             } else {
                 foreach ($tab_emprunt_non_rendu as $emprunt) {
                     $exemplaire = Exemplaire::getNomOuvrageByNumExemplaire($emprunt->get("numExemplaire"));
-                    include "vue/utilisateur/emprunts/empruntUtilisateur.html";
+                    include "vue/utilisateur/emprunts/empruntUtilisateur.php";
                 }
             }
             echo "</div>";
@@ -43,12 +43,13 @@ class controleurEmprunt {
             } else {
                 foreach ($tab_emprunt_rendu as $emprunt) {
                     $exemplaire = Exemplaire::getNomOuvrageByNumExemplaire($emprunt->get("numExemplaire"));
-                    include "vue/utilisateur/emprunts/empruntUtilisateur.html";
+                    include "vue/utilisateur/emprunts/empruntUtilisateur.php";
                 }
             }
             echo "</div>";
             echo "</div>";
         }
+        include("js/date_script.html");
         echo "</body> </html>";
     }
 

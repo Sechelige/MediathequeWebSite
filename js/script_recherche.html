@@ -1,0 +1,30 @@
+<script>
+    function recherche(e) {
+        if (e.length == 0) {
+            document.getElementsByClassName("result")[0].classList.add("none");
+        } else {
+            document.getElementsByClassName("result")[0].classList.remove("none");
+        }
+        all_livre = document.getElementsByClassName("book");
+        const livres = Array.from(all_livre);
+        let i = 0;
+        livres.forEach(element => {
+            if (i < 4) {
+                if( element.dataset.titre.toUpperCase().search(e.toUpperCase()) != -1) {
+                    element.classList.remove("none");
+                    i++;
+                } else {
+                    element.classList.add("none");
+                }
+            }
+        });
+        if (i == 0 ) {
+            document.getElementsByClassName("notfound")[0].classList.remove("none");
+        } else {
+            document.getElementsByClassName("notfound")[0].classList.add("none");
+        }
+    }
+</script>
+</div>
+</div>
+</section>

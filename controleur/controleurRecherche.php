@@ -11,14 +11,13 @@ class controleurRecherche {
         include ("vue/recherche/cherche_bar.html");
         $tab = controleurOuvrage::getAllOuvrage();
         $i = 0;
-        $u = "";
+        $u = "none";
         foreach ($tab as $value) {
-            if ($i >= 4) $u = "none";
             include("vue/recherche/autocomplete.php");
             $i++;
         }
         include("vue/recherche/voirtout.php");
-        echo "</div></div></section>";
-        //include ("vue/footer/footer.html");
+        include("js/script_recherche.html");
+        include ("vue/footer/footer.html");
     }
 }

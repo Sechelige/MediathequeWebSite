@@ -13,7 +13,6 @@ class ControleurConnexion {
     public static function connecterUtilisateur(){
         $login = $_POST["login"];
         $mdp = $_POST["mdp"];
-        echo "<h1>$login</h1>";
         $b = Utilisateur::checkMDP($login, $mdp);
 
         if($b){
@@ -29,6 +28,6 @@ class ControleurConnexion {
         session_unset();
         session_destroy();
         setcookie(session_name(), '', time()-1);
-        self::afficheConnexion();
+        ControleurAcceuil::afficheAcceuil();
     }
 }

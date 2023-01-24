@@ -1,15 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
 .nav-info  a {
     text-decoration: none;
     color: white;
 }
 
 .nav-info{
+    font-family: "Roboto";
     height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #386641
+}
+
+.nav-info .lien-info-global i {
+    font-size: 20px;
+    margin-right: 8px;
+    color: white;
 }
 
 .lien-info-global{

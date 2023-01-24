@@ -1,3 +1,3 @@
 <div class='livre_autocomple voirtout'>
-    <p>Voir tout</p>
+    <a href="index.php?controleur=controleurRecherche&recherche=">Voir tout...</a>
 </div>

@@ -1,18 +1,3 @@
-<!--<header>
-    <div class="logoleft border-button">
-        <img class="logo_img" src="img/paris_saclay.png" alt="rien">
-        <h1 class="logo_name">MEDIATHEQUE DE MOULON</h1>
-    </div>
-    <div class="recherche border-button">
-        <?php
-        //echo "<h1>$titre</h1>";
-        ?>
-    </div>
-    <div class="connexion child_none border-button">
-        <a class="connect" href="index.php" >RETOUR</a>
-    </div>
-</header>
--->
 <nav>
 <div class="logo-nav"><a href="index.php"><img src="img/navLogo.svg"/></a></div>
 <div class="container-nav">
@@ -36,7 +21,8 @@
         <ul>
             <li><a href="index.php?controleur=controleurUtilisateur&numUtilisateur=1"><i class="fa-solid fa-user"></i>Mes Informations</a></li>
             <li><a href="index.php?controleur=controleurEmprunt&numUtilisateur=1"><i class="fa-solid fa-cog"></i>Emprunts</a></li>
-            <li><a href="index.php?controleur=controleurReservation&numUtilisateur=1"><i class="fa-solid fa-sign-out-alt"></i>Reservations</a></li>
+            <li><a href="index.php?controleur=controleurReservation&numUtilisateur=1"><i class="fa-solid fa-cog"></i>Réservations</a></li>
+            <li><a href="index.php?"><i class="fa-solid fa-sign-out-alt"></i>Deconnexion</a></li>
         </ul>
     </div>
 </div>

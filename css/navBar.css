@@ -152,7 +152,7 @@ nav .extend-nav-connect a {
 .extend-nav-utili-prop ul {
     display: flex;
     flex-direction: column;
-    
+    z-index: 4;
 }
 
 .extend-nav-utili-prop ul li {

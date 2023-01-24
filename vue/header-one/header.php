@@ -28,7 +28,7 @@
     <div class="extend-nav-connect">
         <ul>
             <li><a href=""><i class="fa-solid fa-bell"></i></a></li>
-            <div class="log" id="log-info"><li><i class="fa-solid fa-user"></i>Nom Prenom</a></li></div>
+            <div class="log" id="log-info"><li><i class="fa-solid fa-user"></i>Amar Quentin<?php //echo "$nomUtilisateur $prenomUtilisateur";?></a></li></div>
             <!--<li><div class="affiche-utili-prop"></div><i class="fa-solid fa-bars"></i></li>-->
         </ul>
     </div>

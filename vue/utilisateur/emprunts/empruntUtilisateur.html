@@ -5,11 +5,11 @@ echo "
         <img src='img/ouvrage/".$emprunt->get("numExemplaire").".png' alt=''>
     </div>
     <div class='info-emprunt'>
-        <div class='text'>
-            <div class='titre-livre'>$exemplaire</div>
-            <div class='texte-date-Emprunt'>Date d'emprunt :</div>
-            <div class='date-emprunt'>".$emprunt->get("dateEmprunt")."</div>
-            <div class='texte-date-rendu'>Date de retour prévu :</div>
+        <div class='text-info'>
+            <div class='title'>$exemplaire</div>
+            <div class='text'>Date d'emprunt :</div>
+            <div class='dateEmprunt'>".$emprunt->get("dateEmprunt")."</div>
+            <div class='text'>Date de retour prévu :</div>
             <div class='date-retour-prevu'>".$emprunt->get("dateRenduPrevu")."</div>
         </div>
         <div class='retard'>

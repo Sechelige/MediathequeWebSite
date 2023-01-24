@@ -1,6 +1,4 @@
-body{
-    overflow-x: hidden;
-}
+
 
 header {
     z-index: 2;
@@ -77,9 +75,7 @@ header {
     flex-direction: column;
 }
 
-.livre_list .list_pup{
-    overflow-y: scroll;
-}
+
 
 .list_pup p {
     font-family: Inter;

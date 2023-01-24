@@ -3,7 +3,7 @@
 
 .emprunt {
     position: relative;
-    width: 100%;
+    width: 55%;
     max-height: 100%;
 
     display: flex;
@@ -13,22 +13,64 @@
 
     flex: 30%;
     padding: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
+.title{
+    text-align: left;
+    font-weight: bolder;
+    font-size: large;
+}
 
 .mes-emprunt {
+    margin-top: 6vh;
+    padding: 3vh;
     flex: 0 0 49.99%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
 }
 
 
 .div-img > img {
-    width: 5rem;
+    width: 9rem;
     height: 100%;
-    margin-right: 3vh;
+    margin-right: 5vh;
+    float: right;
 }
 
 .info-emprunt{
     width: 50%;
+}
+
+.text{
+    margin-top: 2vh;
+}
+
+.prolong{
+    margin-top: 2vh;
+}
+
+
+.plus-info{
+    margin-top: 3vh;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #386641;
+}
+
+a:hover{
+    color:#6A994E ;
+}
+
+.dateEmprunt{
+    color: #BC4749;
+}
+
+.date-retour-prevu{
+    color: #BC4749;
 }

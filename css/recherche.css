@@ -1,7 +1,6 @@
 .recheche_section{
-    position: absolute;
     top: 7%;
-    height: 50%;
+    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -135,3 +134,18 @@
     user-select: none;
     cursor: pointer;
 }
+
+.viewAll {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.livre_recherche {
+    border: 1px solid;
+    flex: 0 0 33%;
+}
+
+

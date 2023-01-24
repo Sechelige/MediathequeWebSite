@@ -18,6 +18,10 @@ class controleurRecherche {
         }
         include("vue/recherche/voirtout.php");
         include("js/script_recherche.html");
+        foreach($tab as $value) {
+            include("vue/recherche/livre_recherche.php");
+        }
+        echo "</section>";
         include ("vue/footer/footer.html");
     }
 }

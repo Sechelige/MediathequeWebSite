@@ -13,11 +13,10 @@ class ControleurConnexion {
     public static function connecterUtilisateur(){
         $login = $_POST["login"];
         $mdp = $_POST["mdp"];
-
+        echo "<h1>$login</h1>";
         $b = Utilisateur::checkMDP($login, $mdp);
 
         if($b){
-            echo "<h1>test</h1>";
             $_SESSION["login"] = $_POST["login"];
             echo "<pre>session courante : <br>"; print_r($_SESSION); echo "</pre>";
             ControleurAcceuil::afficheAcceuil();

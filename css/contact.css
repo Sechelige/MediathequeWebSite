@@ -8,13 +8,6 @@
     src: url("Martel-Black.ttf");
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
-    font-size: large;
-}
-
-
 
 #usedtobeHeader {
     display: flex;

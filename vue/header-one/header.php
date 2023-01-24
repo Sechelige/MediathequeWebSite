@@ -3,11 +3,11 @@
 <div class="container-nav">
     <div class="nav-links">
         <ul>
-            <li><a  class="select" href="index.html"><i class="fa-solid fa-book select"></i>Accueil</a></li>
+            <li><a  class="select" href="index.php"><i class="fa-solid fa-book select"></i>Accueil</a></li>
             <li><a href=""><i class="fa-solid fa-pen-nib"></i>Auteur</a></li>
             <li><a href=""><i class="fa-solid fa-book"></i>Ouvrages</a></li>
-            <li><a href=""><i class="fa-solid fa-address-book"></i>Contact</a></li>
-            <li><a href=""><i class="fa-solid fa-magnifying-glass"></i>Recherche</a></li>
+            <li><a href="index.php?controleur=controleurContact"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+            <li><a href="index.php?controleur=controleurRecherche"><i class="fa-solid fa-magnifying-glass"></i>Recherche</a></li>
         </ul>
     </div>
     <div class="extend-nav-connect">

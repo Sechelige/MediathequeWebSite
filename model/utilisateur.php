@@ -28,11 +28,12 @@ class Utilisateur extends Model{
 		$req_prep->execute($valeurs);
 		$req_prep->setFetchMode(PDO::FETCH_CLASS,"Utilisateur");
 		$tabUtilisateurs = $req_prep->fetchAll();
-        
-		if (sizeof($tabUtilisateurs) == 1)
-			return true;
-		else
+
+        if (sizeof($tabUtilisateurs) == 1) {
+            return true;
+        } else{
 			return false;
+        }
 	}
 
     //utilisateur by numUtilisateur

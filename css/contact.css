@@ -1,0 +1,227 @@
+@font-face {
+    font-family: "BebasNeue-Regular";
+    src: url("BebasNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Martel-Black";
+    src: url("Martel-Black.ttf");
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: large;
+}
+
+
+
+#usedtobeHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(header.jpg);
+    background-size: cover;
+    padding: 40px;
+}
+
+#usedtobeHeader h1 {
+    font-size: 50px;
+    color: white;
+}
+
+
+.Titre {
+    font-family: "BebasNeue-Regular";
+}
+
+.home {
+    color: white;
+}
+
+.main {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+}
+
+
+
+.contactPart1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding-bottom: 5%;
+}
+
+table {
+    border: 1px solid;
+    margin: 2%;
+    padding: 2%;
+}
+
+.directeur {
+    width: 400px;
+    height: auto;
+}
+
+
+@media only screen and (max-width: 640px) {
+    .directeur {
+        display: none;
+    }
+
+    .secretaire {
+        display: none;
+    }
+}
+
+
+.left {
+    flex: 30%;
+    padding: 20px;
+    border: 1px solid;
+    color: black;
+}
+
+.right img {
+    height: 300px;
+    width: 400px;
+    margin-top: 5px;
+}
+
+li a {
+    color: black;
+}
+
+a:hover {
+    color: #A7C957;
+}
+
+a {
+    color: black;
+}
+
+p {
+    color: black;
+}
+
+h1,h2 {
+    color: black;
+    font-family: "MontserratAlternates-ExtraBold";
+}
+
+
+#ouverture {
+    float : right;
+}
+
+.question {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: black;
+    text-align: center;
+    border: 1px solid;
+    width: 50%;
+    margin: auto;
+}
+
+.question h2 {
+    font-size: 15px;
+}
+
+form {
+    margin-top: 2%;
+}
+
+.contact {
+    width: 100%;
+    border: none;
+    margin-bottom: 5%;
+}
+
+.boite {
+    width: 70%;
+}
+
+.reseauxSociaux {
+    padding-left: 5%;
+}
+
+
+
+h3{
+    color: black;
+}
+
+.icons {
+    width: 4%;
+    height: auto;
+    padding-bottom: 3%;
+    padding-left: 1%;
+}
+
+.envoyer{
+    background-color: #6A994E;
+    color: #fff;
+    text-decoration: none;
+    height: 25px;
+    width: 90px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.envoyer:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;    
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:680px) {
+    nav .onglets {
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main .contactPart1 {
+        margin: 10px;
+    }
+    .main .content .contactPart1 .right img {
+        height: 200px;
+        width: 100%;
+        margin-top: -0px;
+    }
+    .main .content .contactPart1 {
+        display: block;
+    }
+}
+
+@media screen and (max-width:680px) {
+    nav .onglets {
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main .contactPart2 {
+        margin: 10px;
+    }
+    .main .content .contactPart2 .right img {
+        height: 200px;
+        width: 100%;
+        margin-top: -0px;
+    }
+    .main .content .contactPart2 {
+        display: block;
+    }
+    .icons {
+        width: 10%;
+    }
+}
+
+@media only screen and (min-width: 681px) and (max-width: 1000px) {
+    .icons {
+        width: 6%;
+    }
+}

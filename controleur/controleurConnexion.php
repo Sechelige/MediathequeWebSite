@@ -18,6 +18,7 @@ class ControleurConnexion {
 
         if($b){
             $_SESSION["login"] = $_POST["login"];
+            echo "<pre>session courante : <br>"; print_r($_SESSION); echo "</pre>";
             ControleurAcceuil::afficheAcceuil();
         } else{
             self::afficheConnexion();

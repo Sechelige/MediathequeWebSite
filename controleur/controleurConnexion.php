@@ -17,6 +17,7 @@ class ControleurConnexion {
         $b = Utilisateur::checkMDP($login, $mdp);
 
         if($b){
+            echo "<h1>test</h1>";
             $_SESSION["login"] = $_POST["login"];
             echo "<pre>session courante : <br>"; print_r($_SESSION); echo "</pre>";
             ControleurAcceuil::afficheAcceuil();

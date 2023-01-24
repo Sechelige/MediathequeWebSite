@@ -13,6 +13,7 @@ class ControleurConnexion {
     public static function connecterUtilisateur(){
         $login = $_POST["login"];
         $mdp = $_POST["mdp"];
+        echo $login;
 
         $b = Utilisateur::checkMDP($login, $mdp);
 

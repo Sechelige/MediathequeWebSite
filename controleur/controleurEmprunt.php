@@ -49,12 +49,40 @@ class controleurEmprunt {
             echo "</div>";
             echo "</div>";
         }
-        include("js/date_script.html");
         echo "</body> </html>";
     }
 
     public static function nbEmpruntEnCours($n) {
         $nbEmprunt = Emprunt::getNbEmpruntEnCours($n);
         return $nbEmprunt;
+    }
+
+
+    public static function tempsJusquaDate($dateString) {
+        $dateActuelle = new DateTime();
+        $dateCible = new DateTime($dateString);
+        $diffTemps = $dateCible->getTimestamp() - $dateActuelle->getTimestamp();
+        $diffJours = ceil($diffTemps / (60 * 60 * 24));
+        if (abs($diffJours) <= 31) {
+            if ($diffJours < 0) {
+                return "Il y " . floor(abs($diffJours)) . " jour(s)";
+            } else if ($diffJours > 0) {
+                return "Dans " . floor(abs($diffJours)) . " jour(s)";
+            }
+        } else if (abs($diffJours) < 365) {
+            if ($diffJours < 0) {
+                return "Il y " . floor(abs($diffJours) / 31) . " mois";
+            } else if ($diffJours > 0) {
+                return "Dans " . floor(abs($diffJours) / 31) . " mois";
+            }
+        } else if (abs($diffJours) >= 365) {
+            if ($diffJours < 0) {
+                return "Il y " . floor(abs($diffJours) / 365) . " année(s)";
+            } else if ($diffJours > 0) {
+                return "Dans " . floor(abs($diffJours) / 365) . " année(s)";
+            }
+        } else {
+            return "Aujourd'hui";
+        }
     }
 }

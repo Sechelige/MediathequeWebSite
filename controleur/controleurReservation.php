@@ -11,7 +11,7 @@ class ControleurReservation {
         $utilisateur = ControleurUtilisateur::getNumUtilisateur();
         include ("vue/header-one/header.php");
         $tab_reservation = Reservation::getReservationByNumUtilisateur($utilisateur);
-        ControleurUtilisateur::afficherNavBarGauche(3);
+        include ("vue/navBarInfo.html");
         echo "<div class='inline'>";
         if ($tab_reservation == false) {
             echo "<h2>Vous n'avez pas de réservation</h2>";

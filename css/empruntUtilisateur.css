@@ -1,18 +1,5 @@
 
 
-.inline:not(.selfinfo) {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    top: 7%;
-    left: 15%;
-    width: 85%;
-    height: 93%;
-}
-
-.inline h2 {
-    position: absolute;
-}
 
 .emprunt {
     position: relative;

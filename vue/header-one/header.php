@@ -22,7 +22,7 @@
             <li><a href="index.php?controleur=controleurUtilisateur&numUtilisateur=1"><i class="fa-solid fa-user"></i>Mes Informations</a></li>
             <li><a href="index.php?controleur=controleurEmprunt&numUtilisateur=1"><i class="fa-solid fa-cog"></i>Emprunts</a></li>
             <li><a href="index.php?controleur=controleurReservation&numUtilisateur=1"><i class="fa-solid fa-cog"></i>Réservations</a></li>
-            <li><a href="index.php?"><i class="fa-solid fa-sign-out-alt"></i>Deconnexion</a></li>
+            <li><a href="index.php?controleur=controleurConnexion&action=deconnecterUtilisateur"><i class="fa-solid fa-sign-out-alt"></i>Deconnexion</a></li>
         </ul>
     </div>
 </div>

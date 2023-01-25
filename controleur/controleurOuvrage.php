@@ -28,7 +28,7 @@ class controleurOuvrage {
             }
         } else {
             $alerte="Erreur ouvrage non trouvé dans la base de données";
-            $lienFermerAlerte = "/index.php?controleur=acceuil&action=afficheAcceuil";
+            $lienFermerAlerte = "/index.php?controleur=controleurAccueil&action=afficheAccueil";
             include ("vue/alerte.html");
         }
         echo "</body> </html>";

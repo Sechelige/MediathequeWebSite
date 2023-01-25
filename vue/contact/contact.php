@@ -33,7 +33,7 @@
                         d'Orsay. Elle fait partie du réseau des 40 bibliothèques et centres de documentation de l'Université Paris-Saclay.</p>
                 </div>
                 <div class="right">
-                    <iframe src="https://www.google.com/maps/embed?pb=!4v1673269586869!6m8!1m7!1sd_YdcUlS9qQ5HDQgRqGuLg!2m2!1d48.71180741716282!2d2.16970783810165!3f16.554556910349568!4f9.81842069936667!5f0.7820865974627469" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10311.137015895509!2d2.160188940760848!3d48.71253866837385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sfr!4v1674639260676!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
         </div>
 
 

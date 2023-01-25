@@ -120,9 +120,10 @@ h1,h2 {
     margin-bottom: 5%;
     color: black;
     text-align: center;
-    border: 1px solid;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 50%;
     margin: auto;
+    padding: 2vh;
 }
 
 .question h2 {
@@ -141,7 +142,8 @@ form {
 
 .boite {
     width: 70%;
-}
+    border: none;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;}
 
 .reseauxSociaux {
     padding-left: 5%;
@@ -176,6 +178,7 @@ h3{
     height: auto;
     padding-bottom: 3%;
     padding-right: 1vh;
+    
 }
 
 .envoyer{

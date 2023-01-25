@@ -16,6 +16,8 @@ class controleurOuvrage {
         return $tab_ouvrage;
     }
 
+
+
     public static function afficheOuvrage() {
         $tab_ouvrage = self::getOuvrageGet();
         $titre = "Ouvrage";     
@@ -34,5 +36,21 @@ class controleurOuvrage {
         echo "</body> </html>";
     }
 
+    public static function getOuvrageRandom() {
+        $tab_ouvrage = Ouvrage::getOuvrageHasard();
+        $slides = array();
+        foreach ($tab_ouvrage as $ouvrage) {
+            array_push($slides, array(
+                    "nomOuvrage" => $ouvrage->get("nomOuvrage"),
+                    "nomAuteur" => $ouvrage->get("nomAuteur"),
+                    "prenomAuteur" => $ouvrage->get("prenomAuteur"),
+                    "numOuvrage" => $ouvrage->get("numOuvrage"),
+                    "description" => $ouvrage->get("description"),
+                    "nomTypeOuvrage" => $ouvrage->get("nomTypeOuvrage"),
+                    "nom_genre" => $ouvrage->get("nom_genre")
+            ));
+        }
+        return $slides;
+    }
     
 }

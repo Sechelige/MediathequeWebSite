@@ -41,4 +41,21 @@ class Ouvrage extends Model{
             echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
         }
     }
+
+    // fonction qui permet de recuperer 5 ouvrages au hasard
+
+    public static function getOuvrageHasard() {
+        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR ORDER BY RAND() LIMIT 5";
+        try {
+            $req_prep = Connexion::pdo()->prepare($sql);
+            $req_prep->execute();
+            $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Ouvrage');
+            $tab_ouvrage = $req_prep->fetchAll();
+            if (empty($tab_ouvrage))
+                return false;
+            return $tab_ouvrage;
+        } catch (PDOException $e) {
+            echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
+        }
+    }
 }

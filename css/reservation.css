@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
 .reservation {
+  font-family: "Roboto";
   vertical-align: top;
   display: inline-block;
   width: 100%;
@@ -23,6 +26,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
+  font-size: large;
 }
 
 .auteur {
@@ -99,6 +104,26 @@
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.btn-annuler-reservation{
+  background-color: #6A994E;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  height: 25px;
+  width: 100px;
+  border: none;
+  margin-right: 5vh;
+  margin-left: 5vh;
+  padding: 1vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.btn-annuler-reservation:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;    
+    cursor: pointer;
 }
 
 .btn-confirmer-annuler-res {

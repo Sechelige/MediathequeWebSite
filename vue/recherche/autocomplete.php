@@ -1,4 +1,7 @@
-<div class='livre_autocomple <?php echo $u ?>'>
+<div class='livre_autocomple book <?php echo $u ?>'
+data-titre = '<?php echo $value->get("nomOuvrage") ?>'
+onclick = 'location.href="index.php?controleur=controleurOuvrage&numOuvrage=<?php echo $value->get("numOuvrage") ?>";'
+>
     <img src='img/ouvrage/<?php echo $value->get("numOuvrage") ?>.png' alt=''>
     <div>
         <p><?php echo $value->get("nomOuvrage") ?></p>

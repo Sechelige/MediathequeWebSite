@@ -1,5 +1,7 @@
-    .mes-infos {
-        font-family: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+   .mes-infos {
+        font-family: "Roboto";
         vertical-align: top;
         display: inline-block;
         margin-top: 0;
@@ -29,12 +31,11 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        font-family: Raleway;
         align-items: center;
         width: 100%;
         margin-top: 2vh;
         font-size: 1rem;
-        font-weight: lighter;
+        font-weight: light;
         user-select: none;
     }
 
@@ -49,7 +50,7 @@
 
     .titre-info::after {
         content: '';
-        width: 55%;        
+        width: 60%;        
         margin-left: 1%;
         height: 1px;
         background-color: rgba(0, 0, 0, 0.3);
@@ -89,6 +90,8 @@
 
     .self-info-content{
         margin-top: 1em;
+        padding-left: 30px;
+        padding-right: 30px;
         flex: 0 0 16%;
         position: relative;
     }
@@ -116,7 +119,6 @@
         height: 100%;
         left: -200%;
         transition: 400ms;
-        font-family: Raleway;
     }
 
     .self-info-content:hover .btn-modifier {

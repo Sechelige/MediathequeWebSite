@@ -1,15 +1,212 @@
-    <div class="acceuil">
-        <div class="">
-            <a href='index.php?controleur=controleurConnexion'>Connexion </a>
-        </div>
-        <div class="nav-lien-dev">
-            <a href='index.php?controleur=controleurUtilisateur&numUtilisateur=1'><h2>Go to Information Personnelle de l'utilisateur</h2> </a>
-            <a href='index.php?controleur=controleurEmprunt&numUtilisateur=1'><h2>Go to Emprunt de l'utilisateur</h2> </a>
-            <a href='index.php?controleur=controleurReservation&numUtilisateur=1'><h2>Go to Reservation de l'utilisateur</h2> </a>
-        </div> 
-        <form action="index.php?controleur=controleurRecherche" method="post">
-            <div class="recherche">
-                <input type="text" name="recherche" placeholder="Recherche">
-                <input type="submit" value="Rechercher">
+    
+    <div class="container">
+        <div class="container-accueil">
+            <div class="container-accueil-texte">
+                <h1 class="titre-accueil">Bienvenue sur le site de la médiathèque du Plateau Moulon</h1>
+                <p class="texte-accueil">Vous pouvez réserver un ouvrage en ligne et venir le chercher à la médiathèque du Plateau Moulon.</p>
             </div>
+            <div class="container-accueil-image">
+                <img src="img/biblio.jpg" class="image-accueil">
+            </div>
+        </div>
+
+        <style>
+            .container-accueil{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 400px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .container-accueil-texte{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container-accueil-image{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .titre-accueil{
+                font-family: Roboto;
+                font-size: 35px;
+                font-weight: bold;
+                color: #386641;
+            }
+
+            .texte-accueil{
+                font-family: Roboto;
+                font-size: 18px;
+                font-weight: bold;
+                color: #386641;
+                margin-top: 20px;
+            }
+
+            .image-accueil{
+                width: 300px;
+                height: 300px;
+            }
+
+            @media screen and (max-width: 1000px) {
+                .container-accueil{
+                    flex-direction: column;
+                    height: 100%;
+                }
+
+                .container-accueil-texte{
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .container-accueil-image{
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .titre-accueil{
+                    font-family: Roboto;
+                    font-size: 40px;
+                    font-weight: bold;
+                    color: #6A994E;
+                }
+
+                .texte-accueil{
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #6A994E;
+                    margin-top: 20px;
+                }
+
+                .image-accueil{
+                    width: 300px;
+                    height: 300px;
+                }
+    </style>
+
+   
+    
+    <div class="comment-marhce">
+        <div class="container-etape">
+            <img src="img/search.png"class="logo-action">
+            <div class="texte-etape">
+                Commencé par chercher l'ouvrage qui vous interesse dans la liste des ouvrages disponibles.</div>
+        </div>
+
+        <div class="container-etape">
+            <img src="img/connexion.png"class="logo-action">
+            <div class="texte-etape">
+                Puis connectez-vous sur votre compte. Si vous n'avez pas de compte, inscrivez-vous en allant directement aux comptoirs de la médiathèque du Plateau Moulon à l'aide du formulaire d'inscription ci-joint.<a href="">ici</a></div>
+        </div>
+
+        <div class="container-etape">
+            <img src="img/reserver.png"class="logo-action">
+            <div class="texte-etape">
+                Par la suite, vous pouvez réserver un exemplaire de l'ouvrage que vous avez choisi. Vous pouvez accéder à vos réservations et prêts sur votre compte.</div>
+        </div>
+
+        <div class="container-etape">
+            <img src="img/surPlace.png"class="logo-action">
+            <div class="texte-etape">
+                Enfin, vous pouvez venir chercher votre ouvrage à la médiathèque du plateau Moulon.</div>
+        </div>
     </div>
+
+    <style>
+        .comment-marhce{
+            font-family: Roboto;
+            background-color: #6A994E;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;  
+            align-items: center;
+            width: 100%;
+            height: 250px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .container-etape{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            }
+
+
+        .texte-etape{
+            margin-top: 15px;
+            width: 60%;
+            height: 100px;
+            font-weight: bold;
+        }
+
+        .logo-action{
+            width: 100px;
+            height: 100px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .comment-marhce{
+                flex-wrap: wrap;
+                height: 100%;
+            }
+
+            .texte-etape{
+                margin-top: 20px;
+                width: 60%;
+                height: 100px;
+                font-weight: bold;
+            }
+
+            .logo-action{
+                margin-top: 10px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .comment-marhce{
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .texte-etape{
+                margin-top: 20px;
+                width: 60%;
+                height: 100px;
+                font-weight: bold;
+            }
+
+            .logo-action{
+                margin-top: 10px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+            
+        }
+            
+    </style>

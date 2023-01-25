@@ -50,3 +50,7 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.lien-info-global .lien-info-perso:hover{
+    color: #F2E8CF;
+}

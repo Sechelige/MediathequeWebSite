@@ -1,8 +1,6 @@
 <div class="connexion">
     <h1>Connexion</h1>
-    <form action="index.php" method="post">
-        <input type="hidden" name="controleur" value="ControleurConnexion">
-        <input type="hidden" name="action" value="connecterUtilisateur">
+    <form action="index.php?controleur=controleurConnexion&action=connecterUtilisateur" method="post">
         <div>
             <label for="login">Login</label>
             <input type="email" name="login" placeholder="mail de connexion">

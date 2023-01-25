@@ -52,6 +52,15 @@ class Utilisateur extends Model{
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':numUtilisateur' => $numUtilisateur, ':mdpUtilisateur' => $mdpUtilisateur));
     }
+
+    //get numUtilisateur by email
+    public static function getNumUtilisateurByEmail($emailUtilisateur) {
+        $sql = "SELECT numUtilisateur FROM Utilisateur WHERE emailUtilisateur = :emailUtilisateur";
+        $req = Connexion::pdo()->prepare($sql);
+        $req->execute(array(':emailUtilisateur' => $emailUtilisateur));
+        $tab = $req->fetchAll();
+        return $tab[0][0];
+    }
 }
 
 ?>

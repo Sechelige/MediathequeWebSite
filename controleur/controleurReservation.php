@@ -2,6 +2,7 @@
 require_once 'model/model.php';
 require_once 'model/Reservation.php';
 require_once "controleur/controleurUtilisateur.php";
+require_once "controleur/controleurNav.php";
 
 class ControleurReservation {
 
@@ -9,7 +10,7 @@ class ControleurReservation {
         $titre = "Réservation";      
         include("vue/debut.php");
         $utilisateur = ControleurUtilisateur::getNumUtilisateur();
-        include ("vue/header-one/header.php");
+        controleurNav::afficheNav();
         $tab_reservation = Reservation::getReservationByNumUtilisateur($utilisateur);
         include ("vue/navBarInfo.html");
         echo "<div class='inline'>";
@@ -30,7 +31,7 @@ class ControleurReservation {
         $numExemplaire = $_GET["numExemplaire"];
         Exemplaire::setEstReserveExemplaire(0, $numExemplaire);
         Reservation::supprimerReservation($numReservation);
-        header("Location: index.php?controleur=controleurReservation&numUtilisateur=1");
+        header("Location: index.php?controleur=controleurReservation");
     }
 
     public static function reserverExemplaire(){
@@ -39,7 +40,7 @@ class ControleurReservation {
         $numUtilisateur = $_GET["numUtilisateur"];
         Exemplaire::setEstReserveExemplaire(1, $numExemplaire);
         Reservation::reserverExemplaire($numExemplaire, $numUtilisateur);
-        header("Location: index.php?controleur=controleurReservation&numUtilisateur=1");
+        header("Location: index.php?controleur=controleurReservation");
     }
 
     public static function nbReservation($n){

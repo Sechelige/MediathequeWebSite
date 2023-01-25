@@ -13,7 +13,7 @@
         <div class='retard'>
             <div class='prolong'>Nombre de prolongation pour cet emprunt : <?php  echo $emprunt->get("nbProlongation") ?></div>
         </div>
-        <div class='plus-info'><a href='index.php?controleur=controleurOuvrage&numOuvrage="<?php  echo $emprunt->get("numExemplaire") ?>"&numUtilisateur=1'>+ d'Informations sur l'ouvrage</a>
+        <div class='plus-info'><a href='index.php?controleur=controleurOuvrage&numOuvrage="<?php  echo $emprunt->get("numExemplaire") ?>"'>+ d'Informations sur l'ouvrage</a>
         </div>
     </div>
     

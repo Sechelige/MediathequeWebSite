@@ -1,12 +1,14 @@
 <?php
 
+require_once ("model/model.php");
+require_once ("model/utilisateur.php");
+
+
 class ControleurConnexion {
     public static function afficheConnexion() {
         $titre = "Connexion";
         include ("vue/debut.php");
-        include ("vue/header-one/header.php");
         include ("vue/connexion/connexion.html");
-        include ("vue/footer/footer.html");
     }
 
     public static function connecterUtilisateur(){
@@ -16,7 +18,7 @@ class ControleurConnexion {
 
         if($b){
             $_SESSION["login"] = $_POST["login"];
-            ControleurAccueil::afficheAccueil();
+            header("Location: index.php?controleur=controleurAccueil&action=afficheAccueil");
         } else{
             self::afficheConnexion();
         }
@@ -26,6 +28,6 @@ class ControleurConnexion {
         session_unset();
         session_destroy();
         setcookie(session_name(), '', time()-1);
-        ControleurAccueil::afficheAccueil();
+        header("Location: index.php?controleur=controleurAccueil&action=afficheAccueil");
     }
 }

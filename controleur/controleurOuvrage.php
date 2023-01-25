@@ -2,6 +2,7 @@
 require_once ("model/model.php");
 require_once ("model/ouvrage.php");
 require_once ("controleur/controleurExemplaire.php");
+require_once ("controleur/controleurNav.php");
 
 class controleurOuvrage {
 
@@ -22,7 +23,7 @@ class controleurOuvrage {
         $tab_ouvrage = self::getOuvrageGet();
         $titre = "Ouvrage";     
         include("vue/debut.php");
-        include ("vue/header-one/header.php");
+        controleurNav::afficheNav();
         if ($tab_ouvrage != false) {
             foreach ($tab_ouvrage as $ouvrage) {
                 include "vue/ouvrage/afficheOuvrage.html";

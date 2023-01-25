@@ -2,12 +2,13 @@
 require_once ("model/model.php");
 require_once ("model/ouvrage.php");
 require_once ("controleur/controleurOuvrage.php");
+require_once ("controleur/controleurNav.php");
 
 class controleurRecherche {
     public static function afficheRecherche() {
         $titre = "Recherche";
         include ("vue/debut.php");
-        include ("vue/header-one/header.php");
+        controleurNav::afficheNav();
         include ("vue/recherche/cherche_bar.html");
         $tab = controleurOuvrage::getAllOuvrage();
         $i = 0;

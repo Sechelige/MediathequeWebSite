@@ -2,7 +2,8 @@
 require_once ("model/model.php");
 require_once ("model/emprunt.php");
 require_once ("model/exemplaire.php");
-require_once ("controleurUtilisateur.php");
+require_once ("controleur/controleurUtilisateur.php");
+require_once ("controleur/controleurNav.php");
 
 class controleurEmprunt {
 
@@ -15,7 +16,7 @@ class controleurEmprunt {
         $tab_emprunt_non_rendu = Emprunt::getEmpruntEnCours($numUtilisateur);
         $titre = "Mes Emprunts";
         include("vue/debut.php");
-        include ("vue/header-one/header.php");
+        controleurNav::afficheNav();
         include ("vue/navBarInfo.html");
         echo "<div class='inline'>";
         if ($tab_emprunt_rendu == false && $tab_emprunt_non_rendu == false) {

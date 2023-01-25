@@ -3,16 +3,24 @@ require_once ("model/model.php");
 require_once ("model/utilisateur.php");
 require_once ("controleur/controleurReservation.php");
 require_once ("controleur/controleurEmprunt.php");
+require_once ("controleur/controleurNav.php");
 
 class ControleurUtilisateur {
 
     //recuperation du numUtilisateur par GET
-    public static function getNumUtilisateur() {                // a changer avec la session
-        if (isset($_GET['numUtilisateur'])) {
-            return $_GET['numUtilisateur'];
+    public static function sessionUtilisateur() {
+        if (isset($_SESSION["login"])) {
+            return $_SESSION["login"];
         } else {
             return null;
         }
+    }
+
+    //recuperation du numUtilisateur par session
+    public static function getNumUtilisateur() {
+        $emailUtilisateur = self::sessionUtilisateur();
+        $numUtilisateur = Utilisateur::getNumUtilisateurByEmail($emailUtilisateur);
+        return $numUtilisateur;
     }
 
     //recuperation tableau information utilisateur 
@@ -35,12 +43,12 @@ class ControleurUtilisateur {
         $nbReservation = ControleurReservation::nbReservation($numUtilisateur);
         $nbEmprunt = ControleurEmprunt::nbEmpruntEnCours($numUtilisateur);
         include("vue/debut.php");
-        include ("vue/header-one/header.php");
+        controleurNav::afficheNav();
         include ("vue/navBarInfo.html");
         echo "<div class='inline selfinfo'>";
         if (isset($_GET['alerte'])) {
             $alerte="L'ancien mot de passe ne correspond pas à celui indiqué.";
-            $lienFermerAlerte = "/index.php?controleur=controleurUtilisateur&numUtilisateur=1";
+            $lienFermerAlerte = "/index.php?controleur=controleurUtilisateur";
             include ("vue/alerte.html");
         }
         foreach ($utilisateur as $u) {
@@ -67,9 +75,9 @@ class ControleurUtilisateur {
         $ancMdpByPost = $_POST['ancienmdp'];
         if ($ancMdpByPost == $ancMdp) {
             Utilisateur::updateMdp($numUtilisateur, $nvMdp);
-            header("Location: index.php?controleur=controleurUtilisateur&action=afficherUtilisateurInfoPerso&numUtilisateur=1");
+            header("Location: index.php?controleur=controleurUtilisateur&action=afficherUtilisateurInfoPerso");
         } else {
-            header("Location: index.php?controleur=controleurUtilisateur&action=afficherUtilisateurInfoPerso&numUtilisateur=1&alerte=1");
+            header("Location: index.php?controleur=controleurUtilisateur&action=afficherUtilisateurInfoPerso&alerte=1");
         }   
     }
 

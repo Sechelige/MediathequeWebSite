@@ -8,18 +8,18 @@
         <div class="content">
             <div class="contactPart1">
                 <div class="left">
-                    <h2>Nous contacter</h2>
+                    <h2 class="titreContact">Nous contacter</h2>
                     <ul>
-                        <li><a href="https://www.google.com/intl/fr/gmail/about/">MediathequeOrsay@gmail.com</a></li>
+                        <li><a class="lienContact" href="https://www.google.com/intl/fr/gmail/about/">MediathequeOrsay@gmail.com</a></li>
                         <li>
-                            <p>Téléphone : +332345678</p>
+                            <p class="texteContact">Téléphone : +332345678</p>
                         </li>
                     </ul>
 
 
                 </div>
                 <div class="right">
-                    <img src="blibliotheque.jpg" alt="">
+                    <img src="img/contact/blibliotheque.jpg" alt="">
                 </div>
             </div>
 
@@ -27,9 +27,9 @@
 
             <div class="contactPart1">
                 <div class="left">
-                    <h2>Adresse</h2>
-                    <a href="https://moovitapp.com/index/fr/transport_en_commun-line-91_06-Paris-662-3220607-91259271-0">Accès : RER B | 91-06 puis 91-11 | 9</a>
-                    <p>La bibliothèque universitaire Paris-Saclay vous accueille sur le campus
+                    <h2 class="titreContact">Adresse</h2>
+                    <a class="lienContact" href="https://moovitapp.com/index/fr/transport_en_commun-line-91_06-Paris-662-3220607-91259271-0">Accès : RER B | 91-06 puis 91-11 | 9</a>
+                    <p class="texteContact">La bibliothèque universitaire Paris-Saclay vous accueille sur le campus
                         d'Orsay. Elle fait partie du réseau des 40 bibliothèques et centres de documentation de l'Université Paris-Saclay.</p>
                 </div>
                 <div class="right">
@@ -40,7 +40,7 @@
 
 
         <div class="question">
-            <h2>Une question ?</h2>
+            <h2 class ="uneQuestion">Une question ?</h2>
             <h2>Vous souhaitez être recontacté(e) par un membre de notre équipe ?</h2>
 
 
@@ -67,8 +67,8 @@
 
     <div class="reseauxSociaux">
         <h3 class="reseau">Suivez nous sur nos réseaux !</h3>
-        <a href="https://twitter.com/?lang=fr"><img class="icons" src="twitter.png" alt="image logo twitter"></a>
-        <a href="https://www.instagram.com"><img class="icons" src="instagram.png" alt="image logo instagram"></a>
-        <a href="https://fr-fr.facebook.com"><img class="icons" src="facebook.png" alt="image logo facebook"></a>
+        <a href="https://twitter.com/?lang=fr"><img class="icons" src="img/contact/twitter.png" alt="image logo twitter"></a>
+        <a href="https://www.instagram.com"><img class="icons" src="img/contact/instagram.png" alt="image logo instagram"></a>
+        <a href="https://www.facebook.com"><img class="icons" src="img/contact/facebook.png" alt="image logo facebook"></a>
     </div>
 </body>

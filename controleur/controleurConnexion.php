@@ -1,7 +1,6 @@
 <?php
 
 class ControleurConnexion {
-
     public static function afficheConnexion() {
         $titre = "Connexion";
         include ("vue/debut.php");

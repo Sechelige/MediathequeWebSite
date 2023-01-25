@@ -13,9 +13,11 @@ nav {
     margin-bottom: 5px;
     display: flex;
 }
+
 .container-nav-responsive {
     display: none;
 }
+
 .container-nav {
     width: 100%;
     display: flex;

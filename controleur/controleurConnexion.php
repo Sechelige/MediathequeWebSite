@@ -16,7 +16,7 @@ class ControleurConnexion {
 
         if($b){
             $_SESSION["login"] = $_POST["login"];
-            ControleurAcceuil::afficheAcceuil();
+            ControleurAccueil::afficheAccueil();
         } else{
             self::afficheConnexion();
         }
@@ -26,6 +26,6 @@ class ControleurConnexion {
         session_unset();
         session_destroy();
         setcookie(session_name(), '', time()-1);
-        ControleurAcceuil::afficheAcceuil();
+        ControleurAccueil::afficheAccueil();
     }
 }

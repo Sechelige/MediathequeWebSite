@@ -1,12 +1,12 @@
 <?php
 
-class ControleurAcceuil {
+class ControleurAccueil {
 
-    public static function afficheAcceuil() {
+    public static function afficheAccueil() {
         $titre = "Accueil";
         include ("vue/debut.php");
         include ("vue/header-one/header.php");
         echo "<a href='index.php?controleur=controleurConnexion'>Connexion </a>";
-        include ("vue/acceuil/acceuil.html");//TODO
+        include ("vue/accueil/accueil.html");//TODO
     }
 }

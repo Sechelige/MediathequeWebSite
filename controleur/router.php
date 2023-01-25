@@ -1,8 +1,8 @@
 <?php
 require_once ("./config/connexion.php");
 Connexion::connect();
-$controleur = "controleurAcceuil";
-$action = "afficheAcceuil";
+$controleur = "controleurAccueil";
+$action = "afficheAccueil";
 
 $tableauControleur = ["controleurUtilisateur","controleurEmprunt","controleurReservation","controleurOuvrage","controleurAcceuil","controleurConnexion","controleurRecherche", "controleurContact"];
 $actionParDefaut = array(
@@ -10,7 +10,7 @@ $actionParDefaut = array(
     "controleurEmprunt" => "afficherEmprunt",
     "controleurReservation" => "afficherReservation",
     "controleurOuvrage" => "afficheOuvrage",
-    "controleurAcceuil" => "afficheAcceuil",
+    "controleurAccueil" => "afficheAccueil",
     "controleurConnexion" => "afficheConnexion",
     "controleurRecherche" => "afficheRecherche",
     "controleurContact" => "afficheContact"

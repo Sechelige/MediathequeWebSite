@@ -21,6 +21,7 @@
     <link rel='stylesheet' href='css/tableauExemplaire.css'>
     <link rel='stylesheet' href='css/recherche.css'>
     <link rel='stylesheet' href='css/contact.css'>
+    <link rel='stylesheet' href='css/slide.css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inder">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">

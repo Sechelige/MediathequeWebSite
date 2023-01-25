@@ -1,0 +1,87 @@
+
+.layer {
+    z-index: -1;
+    top: 84px;
+    width: 100%;
+    height: 35%;
+    position: absolute;
+}
+
+
+.layer .slide {
+    transition: all 800ms;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+}
+
+.left_slide {
+    transform: translateX(-100%);
+}
+
+.right_slide {
+    transform: translateX(100%);
+}
+
+.slided > div:not(.blur){
+    z-index: 1;
+    position: absolute;
+    
+
+    max-width: 50%;
+    height: 80%;
+
+    display:grid;
+    grid-template-columns:40% 30% 30% ;
+    grid-template-rows:15% 70% 15%;
+    grid-column-gap:0px;
+    grid-row-gap:0px;
+
+    font-family: Inter;
+}
+
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+
+
+.layer .img_ {
+    opacity: 25%;
+    cursor: pointer;
+    position: absolute;
+    height: 15%;
+}
+
+.layer .img_:hover {
+    opacity: 70%;
+}
+
+.layer > :first-child {
+    z-index: 1;
+    top: 50%;
+    left: 0.5%;
+    transform: translate(-0.5%,-50%);
+}
+
+.layer > :last-child {
+    top: 50%;
+    right: 0.5%;
+    transform: translate(-0.5%,-50%);
+}
+
+.layer > div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.none {
+    display: none;
+}

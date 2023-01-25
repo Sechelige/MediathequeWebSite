@@ -46,7 +46,7 @@
 
 
             <div class="contact">
-                <form>
+                <form class="form-contact">
                     <input class="boite" autocomplete="off" type="text" name="Nom" placeholder="Nom"><br>
                     <input class="boite" autocomplete="off" type="email" name="Email" placeholder="Email"><br>
                     <label for="Contact">Quel service voulez-vous contacter ?</label><br/>

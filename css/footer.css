@@ -6,7 +6,7 @@ footer * {
     z-index: -1;
     display : flex;
     top : 100%;
-    background-color: #61013B;
+    background-color: #386641;
     width : 100%;
     height : auto;
 }
@@ -51,3 +51,9 @@ footer * {
 	color : white;
 	font-style : italic;
 }
+
+.p-footer{
+    margin-bottom: 2vh;
+    color: white;
+}
+

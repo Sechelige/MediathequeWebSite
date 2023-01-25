@@ -4,7 +4,7 @@ Connexion::connect();
 $controleur = "controleurAccueil";
 $action = "afficheAccueil";
 
-$tableauControleur = ["controleurUtilisateur","controleurEmprunt","controleurReservation","controleurOuvrage","controleurAcceuil","controleurConnexion","controleurRecherche", "controleurContact"];
+$tableauControleur = ["controleurUtilisateur","controleurEmprunt","controleurReservation","controleurOuvrage","controleurAccueil","controleurConnexion","controleurRecherche", "controleurContact"];
 $actionParDefaut = array(
     "controleurUtilisateur" => "afficherUtilisateurInfoPerso",
     "controleurEmprunt" => "afficherEmprunt",

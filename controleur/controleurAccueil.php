@@ -6,7 +6,7 @@ class ControleurAccueil {
         $titre = "Accueil";
         include ("vue/debut.php");
         include ("vue/header-one/header.php");
-        echo "<a href='index.php?controleur=controleurConnexion'>Connexion </a>";
+        echo "<a href='index.php?controleur=controleurConnexion&action=connecterUtilisateur'>Connexion </a>";
         include ("vue/accueil/accueil.html");//TODO
     }
 }

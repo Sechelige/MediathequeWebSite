@@ -10,7 +10,9 @@ class ControleurAccueil {
         $slides = controleurOuvrage::getOuvrageRandom();
         include ("vue/debut.php");
         controleurNav::afficheNav();
-        include ("vue/accueil/slider/slider.php");
+        include ("vue/accueil/affichageOuvrage/dernierAjout.html");
+        //include ("vue/accueil/slider/slider.php");
         //include ("vue/accueil/accueil.html");//TODO
+        include ("vue/accueil/informationAccueil.html");
     }
 }

@@ -1,7 +1,7 @@
 <div class="livre_recherche">
     <div class="text_data">
         <h1><?php echo $value->get("nomOuvrage")  ?></h1>
-        <p><?php echo implode("", array_slice(str_split($value->get("description")),0, 150, true)) ?>...</p>
+        <p><?php echo implode("", array_slice(str_split($value->get("description")),0, 140, true)) ?>...</p>
         <div class="small_data">
             <img src="img/person-fill.svg" alt="">
             <p>
@@ -14,7 +14,7 @@
     </div>
     <div class="description_hover">
         <p>
-            <?php echo $value->get("description") ?>
+        <?php echo implode("", array_slice(str_split($value->get("description")),0, 400, true)) ?>...
         </p>
     </div>
     <div class="blur_r"></div>

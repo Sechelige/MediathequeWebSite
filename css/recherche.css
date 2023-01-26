@@ -238,25 +238,38 @@
     text-align: center;
 }
 
-.livre_recherche:hover .description_hover {
+.livre_recherche:hover .description_hover,.livre_recherche:hover .blur_r{
     bottom: 0%;
     transition: 400ms;
 }
 
 
 .description_hover {
+    z-index: 9;
     position: absolute;    
     height: 200px;
-    background-color: rgba(0, 0, 0,0.1);
-    bottom: -100%
+    bottom: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    cursor: pointer;
 }
+
+.description_hover p {
+    color: black;
+    font-family: inter;
+    text-align: center;
+    font-weight: 400;
+}
+
 
 .blur_r {
     position: absolute;
     height: 100%;
     width: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.8) 45%, rgba(255,255,255,0.1) 100%);  
     z-index: 6;
-    background: rgb(255,255,255,0.1);
-    background: linear-gradient(9deg, rgba(255,255,255,0.8) 0%, rgba(0,0,0,0.1) 100%);  
     backdrop-filter: blur(1px);
+    bottom: -100%
 }

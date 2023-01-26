@@ -9,8 +9,11 @@
         const livres = Array.from(all_livre);
         let i = 0;
         livres.forEach(element => {
+            element.classList.add("none");
+        })
+        livres.forEach(element => {
             if (i < 4) {
-                if( element.dataset.titre.toUpperCase().search(e.toUpperCase()) != -1) {
+                if(element.dataset.titre.toUpperCase().search(e.toUpperCase()) != -1) {
                     element.classList.remove("none");
                     i++;
                 } else {

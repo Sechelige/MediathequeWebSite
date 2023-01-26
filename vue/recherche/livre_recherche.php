@@ -1,8 +1,15 @@
 <div class="livre_recherche">
-    <div>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam enim possimus culpa iste voluptates repellendus neque asperiores ducimus, distinctio ad fuga debitis, aliquam aspernatur dolorum quam fugiat reiciendis dignissimos repellat, porro vel animi. Voluptates eum provident sapiente voluptatem veniam fuga quia sit at ut sequi modi, assumenda incidunt excepturi asperiores!
+    <div class="text_data">
+        <h1><?php echo $value->get("nomOuvrage")  ?></h1>
+        <p><?php echo implode("", array_slice(str_split($value->get("description")),0, 150, true)) ?>...</p>
+        <div class="small_data">
+            <img src="img/person-fill.svg" alt="">
+            <p>
+            <?php echo implode("", array_slice(str_split("{$value->get('prenomAuteur')} {$value->get('nomAuteur')}"),0, 20, true)) ?>...
+             </p>
+        </div>
     </div>
-    <div>
-        <img src='img/ouvrage/<?php echo $value->get("numOuvrage") ?>.png' alt=''>
+    <div class=img_div_r>
+        <img class="img_recherche" src='img/ouvrage/<?php echo $value->get("numOuvrage") ?>.png' alt=''>
     </div>
 </div>

@@ -12,4 +12,10 @@
     <div class=img_div_r>
         <img class="img_recherche" src='img/ouvrage/<?php echo $value->get("numOuvrage") ?>.png' alt=''>
     </div>
+    <div class="description_hover">
+        <p>
+            <?php echo $value->get("description") ?>
+        </p>
+    </div>
+    <div class="blur_r"></div>
 </div>

@@ -43,7 +43,6 @@ class Ouvrage extends Model{
     }
 
     // fonction qui permet de recuperer 5 ouvrages au hasard
-
     public static function getOuvrageHasard() {
         $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR ORDER BY RAND() LIMIT 5";
         try {
@@ -58,4 +57,43 @@ class Ouvrage extends Model{
             echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
         }
     }
+
+    // fonction qui permet de recuperer les 12 derniers ouvrages ajouter dans la base de donnée
+    public static function getOuvrageRecent() {
+        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR ORDER BY dateParutionOuvrage DESC LIMIT 12";
+        try {
+            $req_prep = Connexion::pdo()->prepare($sql);
+            $req_prep->execute();
+            $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Ouvrage');
+            $tab_ouvrage = $req_prep->fetchAll();
+            if (empty($tab_ouvrage))
+                return false;
+            return $tab_ouvrage;
+        } catch (PDOException $e) {
+            echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
+        }
+    }
+
+    // fonction qui permet de recuperer les ouvrages les plus emprunter
+    public static function getOuvragePlusEmprunter() {
+        $sql = "SELECT Ouvrage.nomOuvrage, COUNT(Emprunt.numExemplaire) AS nbEmprunts
+        FROM Ouvrage
+        JOIN Exemplaire ON Ouvrage.numOuvrage = Exemplaire.numOuvrage
+        JOIN Emprunt ON Exemplaire.numExemplaire = Emprunt.numExemplaire
+        GROUP BY Ouvrage.nomOuvrage
+        ORDER BY nbEmprunts DESC
+        LIMIT 10;";
+        try {
+            $req_prep = Connexion::pdo()->prepare($sql);
+            $req_prep->execute();
+            $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Ouvrage');
+            $tab_ouvrage = $req_prep->fetchAll();
+            if (empty($tab_ouvrage))
+                return false;
+            return $tab_ouvrage;
+        } catch (PDOException $e) {
+            echo 'Une erreur est survenue <a href=""> retour a la page d\'accueil </a>';
+        }
+    }
+    
 }

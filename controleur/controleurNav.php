@@ -10,8 +10,10 @@ class ControleurNav {
                 $prenom = $u->get("prenomUtilisateur");  
             }
             include ("vue/header-one/header-connecté.php");
+            return 1;
         } else {
             include ("vue//header-one/header.php");
+            return 0;
         }
     }
 }

@@ -23,11 +23,13 @@ class controleurOuvrage {
         $tab_ouvrage = self::getOuvrageGet();
         $titre = "Ouvrage";     
         include("vue/debut.php");
-        controleurNav::afficheNav();
+        $nav = controleurNav::afficheNav();
         if ($tab_ouvrage != false) {
             foreach ($tab_ouvrage as $ouvrage) {
                 include "vue/ouvrage/afficheOuvrage.html";
-                ControleurExemplaire::afficheExemplaireOuvrage($ouvrage->get("numOuvrage"));
+                if ($nav == 1){
+                    ControleurExemplaire::afficheExemplaireOuvrage($ouvrage->get("numOuvrage"));
+                }
             }
         } else {
             $alerte="Erreur ouvrage non trouvé dans la base de données";

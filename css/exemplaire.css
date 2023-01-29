@@ -8,7 +8,7 @@
 }
 
 .body-reserv {
-  z-index: 2;
+  z-index: 90;
   position: absolute;
   display: flex;
   flex-direction: column;

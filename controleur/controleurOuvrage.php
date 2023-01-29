@@ -55,5 +55,17 @@ class controleurOuvrage {
         }
         return $slides;
     }
+
+    public static function afficheAllOuvrage() {
+        $tab_ouvrage = self::getAllOuvrage();
+        $titre = "Ouvrage";     
+        include("vue/debut.php");
+        $nav = controleurNav::afficheNav();
+        if ($tab_ouvrage != false) {
+            foreach ($tab_ouvrage as $ouvrage) {
+                include "vue/ouvrage/afficheOuvrage.html";
+            }
+        }
+    }
     
 }

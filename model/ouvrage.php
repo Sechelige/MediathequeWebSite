@@ -60,7 +60,7 @@ class Ouvrage extends Model{
 
     // fonction qui permet de recuperer les 12 derniers ouvrages ajouter dans la base de donnée
     public static function getOuvrageRecent() {
-        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR ORDER BY dateParutionOuvrage DESC LIMIT 12";
+        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR ORDER BY dateParutionOuvrage DESC LIMIT 7";
         try {
             $req_prep = Connexion::pdo()->prepare($sql);
             $req_prep->execute();
@@ -76,13 +76,13 @@ class Ouvrage extends Model{
 
     // fonction qui permet de recuperer les ouvrages les plus emprunter
     public static function getOuvragePlusEmprunter() {
-        $sql = "SELECT Ouvrage.nomOuvrage, COUNT(Emprunt.numExemplaire) AS nbEmprunts
+        $sql = "SELECT Ouvrage.nomOuvrage, Ouvrage.numOuvrage, COUNT(Emprunt.numExemplaire) AS nbEmprunts
         FROM Ouvrage
         JOIN Exemplaire ON Ouvrage.numOuvrage = Exemplaire.numOuvrage
         JOIN Emprunt ON Exemplaire.numExemplaire = Emprunt.numExemplaire
-        GROUP BY Ouvrage.nomOuvrage
+        GROUP BY Ouvrage.nomOuvrage, Ouvrage.numOuvrage
         ORDER BY nbEmprunts DESC
-        LIMIT 10;";
+        LIMIT 7;";
         try {
             $req_prep = Connexion::pdo()->prepare($sql);
             $req_prep->execute();

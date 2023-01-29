@@ -37,7 +37,7 @@ class ControleurReservation {
     public static function reserverExemplaire(){
         echo "reserverExemplaire";
         $numExemplaire = $_GET["numExemplaire"];
-        $numUtilisateur = $_GET["numUtilisateur"];
+        $numUtilisateur = controleurUtilisateur::getNumUtilisateur();
         Exemplaire::setEstReserveExemplaire(1, $numExemplaire);
         Reservation::reserverExemplaire($numExemplaire, $numUtilisateur);
         header("Location: index.php?controleur=controleurReservation");

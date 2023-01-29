@@ -9,8 +9,7 @@
             <li><a href="index.php?controleur=controleurContact"><i class="fa-solid fa-address-book"></i>Contact</a></li>
             <li><a href="index.php?controleur=controleurRecherche"><i class="fa-solid fa-magnifying-glass"></i>Recherche</a></li>
         </ul>
-    </div>
-    
+    </div> 
     <div class="extend-nav-connect">
         <ul>
             <li><a href=""><i class="fa-solid fa-bell"></i></a></li>

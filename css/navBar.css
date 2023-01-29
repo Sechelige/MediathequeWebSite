@@ -153,6 +153,9 @@ nav .extend-nav-connect a {
     position: absolute;
     top: 70px;
     right: 11%;
+    background-color: white;
+    padding: 2vh;
+    border-radius: 2vh;
 }
 
 .extend-nav-utili-prop ul {

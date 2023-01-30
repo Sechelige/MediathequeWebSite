@@ -30,7 +30,7 @@ class Reservation extends Model{
 
     //fonction qui permet de récupérer les réservations d'un utilisateur
     public static function getReservationByNumUtilisateur($numUtilisateur) {
-        $sql = "SELECT DISTINCT * FROM Reservation Res INNER JOIN Exemplaire Ex ON Res.numExemplaire = Ex.numExemplaire INNER JOIN LangueEx La ON Ex.numLangue = La.numLangue INNER JOIN Ouvrage Ouv ON Ex.numOuvrage = Ouv.numOuvrage INNER JOIN Ecrit Ec ON Ouv.numOuvrage = Ec.numOuvrage INNER JOIN Auteur A ON Ec.numAuteur = A.numAuteur WHERE numUtilisateur =:numUtilisateur ORDER BY dateReservation DESC";
+        $sql = "SELECT DISTINCT * FROM reservation Res INNER JOIN exemplaire Ex ON Res.numExemplaire = Ex.numExemplaire INNER JOIN langueEx La ON Ex.numLangue = La.numLangue INNER JOIN ouvrage Ouv ON Ex.numOuvrage = Ouv.numOuvrage INNER JOIN ecrit Ec ON Ouv.numOuvrage = Ec.numOuvrage INNER JOIN auteur A ON Ec.numAuteur = A.numAuteur WHERE numUtilisateur =:numUtilisateur ORDER BY dateReservation DESC";
         $req_prep = connexion::pdo()->prepare($sql);
         $values = array(
             "numUtilisateur" => $numUtilisateur

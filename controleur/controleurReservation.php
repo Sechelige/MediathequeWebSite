@@ -1,6 +1,6 @@
 <?php 
 require_once 'model/model.php';
-require_once 'model/Reservation.php';
+require_once 'model/reservation.php';
 require_once "controleur/controleurUtilisateur.php";
 require_once "controleur/controleurNav.php";
 

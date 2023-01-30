@@ -38,7 +38,7 @@ class Utilisateur extends Model{
 
     //utilisateur by numUtilisateur
     public static function getUtilisateurByNum($numUtilisateur) {
-        $sql = "SELECT * FROM Utilisateur WHERE numUtilisateur = :numUtilisateur";
+        $sql = "SELECT * FROM utilisateur WHERE numUtilisateur = :numUtilisateur";
         $req = Connexion::pdo()->prepare($sql);
         $req->setFetchMode(PDO::FETCH_CLASS, 'Utilisateur');
         $req->execute(array(':numUtilisateur' => $numUtilisateur));
@@ -48,7 +48,7 @@ class Utilisateur extends Model{
 
     //update mot de passe de l'utilisateur
     public static function updateMdp ($numUtilisateur, $mdpUtilisateur) {
-        $sql = "UPDATE Utilisateur SET mdpUtilisateur = :mdpUtilisateur WHERE numUtilisateur = :numUtilisateur";
+        $sql = "UPDATE utilisateur SET mdpUtilisateur = :mdpUtilisateur WHERE numUtilisateur = :numUtilisateur";
         $req = Connexion::pdo()->prepare($sql);
         $req->execute(array(':numUtilisateur' => $numUtilisateur, ':mdpUtilisateur' => $mdpUtilisateur));
     }

@@ -12,7 +12,7 @@ class Emprunt extends Model{
 
     //Emprunt par numUtilisateur
     public static function getEmpruntByNumUtilisateur($numUtilisateur) {
-        $sql = "SELECT * FROM Emprunt WHERE numUtilisateur=:numUtilisateur";
+        $sql = "SELECT * FROM emprunt WHERE numUtilisateur=:numUtilisateur";
         $req_prep = Connexion::pdo()->prepare($sql);
         $values = array(
             "numUtilisateur" => $numUtilisateur,

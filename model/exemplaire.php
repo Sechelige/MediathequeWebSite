@@ -12,7 +12,7 @@ class Exemplaire extends Model{
 
     //Exemplaire par numExemplaire
     public static function getExemplaireByNumExemplaire($numExemplaire) {
-        $sql = "SELECT * FROM Exemplaire WHERE numExemplaire=:numExemplaire";
+        $sql = "SELECT * FROM exemplaire WHERE numExemplaire=:numExemplaire";
         $req_prep = Connexion::pdo()->prepare($sql);
         $values = array(
             "numExemplaire" => $numExemplaire,
@@ -33,7 +33,7 @@ class Exemplaire extends Model{
             "numExemplaire" => $numExemplaire,
         );
         $req_prep->execute($values);
-        $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Exemplaire');
+        $req_prep->setFetchMode(PDO::FETCH_CLASS, 'exemplaire');
         $tab_exemplaire = $req_prep->fetchAll();
         if (empty($tab_exemplaire))
             return false;
@@ -43,7 +43,7 @@ class Exemplaire extends Model{
 
     //retourne le nombre d'exemplaire par numOuvrage
     public static function getNbExemplaireByNumOuvrage($numOuvrage) {
-        $sql = "SELECT COUNT(*) FROM Exemplaire WHERE numOuvrage=:numOuvrage";
+        $sql = "SELECT COUNT(*) FROM exemplaire WHERE numOuvrage=:numOuvrage";
         $req_prep = Connexion::pdo()->prepare($sql);
         $values = array(
             "numOuvrage" => $numOuvrage,
@@ -59,7 +59,7 @@ class Exemplaire extends Model{
 
     //retourne le nombre d'exemplaire disponible par numOuvrage
     public static function getNbExemplaireDispoByNumOuvrage($numOuvrage) {
-        $sql = "SELECT COUNT(*) FROM Exemplaire WHERE numOuvrage=:numOuvrage AND statusExemplaire='disponible'";
+        $sql = "SELECT COUNT(*) FROM exemplaire WHERE numOuvrage=:numOuvrage AND statusExemplaire='disponible'";
         $req_prep = Connexion::pdo()->prepare($sql);
         $values = array(
             "numOuvrage" => $numOuvrage,
@@ -75,7 +75,7 @@ class Exemplaire extends Model{
 
     //retourne les exemplaires par numOuvrage
     public static function getExemplaireByNumOuvrage($numOuvrage) {
-        $sql = "SELECT * FROM Exemplaire NATURAL JOIN FormatEx NATURAL JOIN LangueEx NATURAL JOIN Editeur NATURAL JOIN Ouvrage WHERE numOuvrage=:numOuvrage";
+        $sql = "SELECT * FROM exemplaire NATURAL JOIN FormatEx NATURAL JOIN LangueEx NATURAL JOIN Editeur NATURAL JOIN Ouvrage WHERE numOuvrage=:numOuvrage";
         $req_prep = Connexion::pdo()->prepare($sql);
         $values = array(
             "numOuvrage" => $numOuvrage,
@@ -90,7 +90,7 @@ class Exemplaire extends Model{
 
     //update estReserveExemplaire = 1
     public static function setEstReserveExemplaire($estReserveExemplaire, $numExemplaire) {
-        $sql = "UPDATE Exemplaire SET estReserveExemplaire=:estReserveExemplaire WHERE numExemplaire=:numExemplaire";
+        $sql = "UPDATE exemplaire SET estReserveExemplaire=:estReserveExemplaire WHERE numExemplaire=:numExemplaire";
         $req_prep = Connexion::pdo()->prepare($sql);
         $values = array(
             "estReserveExemplaire" => $estReserveExemplaire,

@@ -7,6 +7,7 @@
     background-color: #386641;
 }
 .titre-dernier-ajout{
+    padding: 3vh;
     font-size: 20px;
     font-weight: bolder;
     text-decoration: underline;
@@ -42,4 +43,13 @@
     font-weight: bold;
     color: #000;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.titre-ajout-ouv:hover{
+    font-size: 16px;
+    font-weight: bold;
+    color: #A7C957;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

@@ -1,6 +1,6 @@
 
 <div class='dernier-ajout'>
-    <div class='titre-dernier-ajout'>Ouvrage les plus emprunter : </div>
+    <div class='titre-dernier-ajout'>Ouvrage les plus empruntés : </div>
     <div class='container-a'>
 <?php
     foreach ($tab_plus_emprunter as $ouvrage) {

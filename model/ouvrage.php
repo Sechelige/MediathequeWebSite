@@ -9,7 +9,7 @@ class Ouvrage extends Model{
 
     // fonction qui permet de récupérer les données d'un ouvrage
     public static function getOuvrageEtInfoByNumOuvrage($numOuvrage) {
-        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR where numOuvrage =:numOuvrage";
+        $sql = "Select * from ouvrage NATURAL JOIN typeOuvrage NATURAL JOIN genreOuvrage NATURAL JOIN ecrit NATURAL JOIN auteur where numOuvrage =:numOuvrage";
         try {
             $req_prep = Connexion::pdo()->prepare($sql);
             $values = array(
@@ -28,7 +28,7 @@ class Ouvrage extends Model{
 
     // fonction qui permet de recuperer tout les ouvrages et leur informations
     public static function getAllOuvrageEtInfo() {
-        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR";
+        $sql = "Select * from ouvrage NATURAL JOIN typeOuvrage NATURAL JOIN genreOuvrage NATURAL JOIN ecrit NATURAL JOIN auteur";
         try {
             $req_prep = Connexion::pdo()->prepare($sql);
             $req_prep->execute();
@@ -44,7 +44,7 @@ class Ouvrage extends Model{
 
     // fonction qui permet de recuperer 5 ouvrages au hasard
     public static function getOuvrageHasard() {
-        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR ORDER BY RAND() LIMIT 5";
+        $sql = "Select * from ouvrage NATURAL JOIN typeOuvrage NATURAL JOIN genreOuvrage NATURAL JOIN ecrit NATURAL JOIN auteur ORDER BY RAND() LIMIT 5";
         try {
             $req_prep = Connexion::pdo()->prepare($sql);
             $req_prep->execute();
@@ -60,11 +60,11 @@ class Ouvrage extends Model{
 
     // fonction qui permet de recuperer les 12 derniers ouvrages ajouter dans la base de donnée
     public static function getOuvrageRecent() {
-        $sql = "Select * from ouvrage NATURAL JOIN TypeOuvrage NATURAL JOIN GenreOuvrage NATURAL JOIN Ecrit NATURAL JOIN AUTEUR ORDER BY dateParutionOuvrage DESC LIMIT 7";
+        $sql = "Select * from ouvrage NATURAL JOIN typeOuvrage NATURAL JOIN genreOuvrage NATURAL JOIN ecrit NATURAL JOIN auteur ORDER BY dateParutionOuvrage DESC LIMIT 7";
         try {
             $req_prep = Connexion::pdo()->prepare($sql);
             $req_prep->execute();
-            $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Ouvrage');
+            $req_prep->setFetchMode(PDO::FETCH_CLASS, 'ouvrage');
             $tab_ouvrage = $req_prep->fetchAll();
             if (empty($tab_ouvrage))
                 return false;
@@ -76,17 +76,17 @@ class Ouvrage extends Model{
 
     // fonction qui permet de recuperer les ouvrages les plus emprunter
     public static function getOuvragePlusEmprunter() {
-        $sql = "SELECT Ouvrage.nomOuvrage, Ouvrage.numOuvrage, COUNT(Emprunt.numExemplaire) AS nbEmprunts
-        FROM Ouvrage
-        JOIN Exemplaire ON Ouvrage.numOuvrage = Exemplaire.numOuvrage
-        JOIN Emprunt ON Exemplaire.numExemplaire = Emprunt.numExemplaire
-        GROUP BY Ouvrage.nomOuvrage, Ouvrage.numOuvrage
+        $sql = "SELECT ouvrage.nomOuvrage, ouvrage.numOuvrage, COUNT(emprunt.numExemplaire) AS nbEmprunts
+        FROM ouvrage
+        JOIN exemplaire ON ouvrage.numOuvrage = exemplaire.numOuvrage
+        JOIN emprunt ON exemplaire.numExemplaire = emprunt.numExemplaire
+        GROUP BY ouvrage.nomOuvrage, ouvrage.numOuvrage
         ORDER BY nbEmprunts DESC
         LIMIT 7;";
         try {
             $req_prep = Connexion::pdo()->prepare($sql);
             $req_prep->execute();
-            $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Ouvrage');
+            $req_prep->setFetchMode(PDO::FETCH_CLASS, 'ouvrage');
             $tab_ouvrage = $req_prep->fetchAll();
             if (empty($tab_ouvrage))
                 return false;
